@@ -1,4 +1,4 @@
-# 🍽️ Food Fiesta
+# Food Fiesta
 
 **Food Fiesta** is a lively celebration of food, culture, and community that brings together a wide range of cuisines, flavors, and culinary experiences in one place. It is designed for food lovers who enjoy exploring new tastes, trying unique dishes, and spending quality time in a fun and energetic environment.
 
