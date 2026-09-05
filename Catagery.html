@@ -1,0 +1,947 @@
+<html>
+	<head><title>RESTAURANT</title>
+		 <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+	</head>
+		<body>
+		<nav class="fixed top-0 left-0 w-full bg-orange-300 shadow-md z-50">
+		<div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+			<img src="images/logo restaurent.png" class="w-40 h-20 max-w-full object-cover">
+
+    <!-- Desktop Menu -->
+			<ul class="hidden md:flex space-x-6 text-blue-900 font-serif text-lg">
+			  <li><a href="index.html" class="hover:text-green-600">Home</a></li>
+			  <li><a href="Menu.html" class="hover:text-green-600">Menu</a></li>
+			  <li><a href="Catagery.html" class="hover:text-green-600">Category</a></li>
+			  <li><a href="About us.html" class="hover:text-green-600">About Us</a></li>
+			  <li><a href="contact .html" class="hover:text-green-600">Contact</a></li>
+			</ul>
+
+    <!-- Toggle Button -->
+		<button onclick="toggleDark()" class="text-lg md:text-xl">🌙</button>
+			<label for="menuToggle" class="md:hidden flex flex-col space-y-1.5 cursor-pointer">
+			  <span class="block w-6 h-0.5 bg-gray-800"></span>
+			  <span class="block w-6 h-0.5 bg-gray-800"></span>
+			  <span class="block w-6 h-0.5 bg-gray-800"></span>
+			</label>
+		</div>
+
+  <!-- Hidden Checkbox -->
+			<input type="checkbox" id="menuToggle" class="hidden peer">
+
+  <!-- Mobile Menu -->
+		  <div class="hidden peer-checked:block md:hidden bg-orange-200 px-6 py-6">
+			<ul class="flex flex-col space-y-4 text-white text-lg">
+			  <li><a href="index.html" class="block hover:text-pink-300">Home</a></li>
+			  <li><a href="Menu.html" class="hover:text-orange-400">Menu</a></li>
+				<li><a href="Catagery.html" class="hover:text-orange-400">Category</a></li>
+				<li><a href="About us.html" class="hover:text-orange-400">About</a></li>
+				<li><a href="contact .html"class="hover:text-orange-400">Contact</a></li>
+			</ul>
+		  </div>
+		</nav>
+
+<!-- Spacer (important for fixed navbar) -->
+		<div class="h-24"></div><br><br>
+	
+<!--veg food-->
+		<div class="text-center  shadow-md shadow-black text-3xl font-serif  bg-green-100 p-5 w-auto mx-10 h-auto rounded-3xl">
+					VEG FOOD
+		</div><br><br>
+		<div class="grid grid-cols-1 md:grid-cols-2 p-10 gap-30 mx-10 bg-pink-200 shadow-md shadow-black rounded-3xl">
+			<div>
+				<img src="images/veg food.png" class=" mt-10 w-auto h-100">
+			</div>
+			<div class="text-md md:text-2xl">
+				<h3 class="text-3xl font-serif text-pink-500">VEGETARIAN</h3>
+				<p class="text-xl md:-ml-20 md:mt-10 align-justify">Experience the richness of vegetarian cuisine with our flavorful and aromatic dishes.
+				Made with the finest ingredients and traditional recipes, each meal is a celebration of 
+				taste and purity.<br><br>Savor the taste of freshness with our carefully curated vegetarian menu.
+				Packed with vibrant flavors and wholesome ingredients, our dishes bring you the perfect 
+				balance of taste, nutrition, and authenticity.<br><br>Enjoy our delicious range of vegetarian dishes, 
+				prepared with fresh ingredients and rich flavors. From traditional favorites to modern creations, 
+				every dish is crafted to deliver a healthy and satisfying dining experience.
+				</p>	
+			</div>
+		</div><br><br>
+		
+			<div>
+				<h3 class="text-center text-4xl font-bold text-cursive  p-5  rounded-3xl "> 
+					MAIN CATEGORIES
+				</h3>
+			</div><br>
+			
+			<div class="grid grid-cols-1 p-2 md:grid-cols-2 border-6 border-amber-300 mx-40 md:gap-55 text-md md:text-xl">
+				<img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787893651/pongal.png" class="h-80 md-70 w-110 rounded-2xl">
+				<div ><br>
+				<span class="font-serif text-2xl text-pink-500">PRICE RS.30</span><br><br>
+				<P class="text-xl align-justify md:-ml-50">Delight in the rich and creamy taste of <b>Pongal</b>, a traditional South Indian 
+				favorite prepared with rice, lentils, and aromatic spices. Infused with ghee and served fresh with chutney 
+				and sambar, it offers a perfect balance of flavor and comfort. Warm, creamy, and full of flavor—our Pongal is a perfect blend of rice, lentils, and ghee, served fresh for a comforting meal.
+				</P>
+				</div>
+			</div><br><br>
+			
+			<div class="grid grid-cols-1 p-2 md:grid-cols-2 border-6  border-amber-300 mx-40 md:gap-55 text-md md:text-xl">
+				<img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787893494/edli.jpg" class="h-80 md:h-80 w-110 p-1 rounded-2xl">
+				<div><br>
+				<span class="mt-30 font-serif text-2xl text-pink-500">PRICE RS.40</span><br><br>
+				<P class="text-xl align-justify  md:-ml-50">Fluffy, soft, and freshly steamed<b>idlis</b> made from perfectly fermented rice and urad dal batter. Served hot with coconut chutney and sambar, it’s a light,
+				healthy, and comforting South Indian classic.<br>A timeless South Indian favorite, our idlis are steamed to perfection for a soft and airy texture. Paired with flavorful chutneys and piping hot sambar
+				for a wholesome experience.</p>
+				</div>
+			</div><br><br>
+			
+			<div class="grid grid-cols-1 p-2 md:grid-cols-2 border-6  border-amber-300 mx-40 md:gap-55 text-md md:text-xl">
+				<img src="images/dhosa c.jpg" class="h-90 md:h-80 w-110 p-1 rounded-2xl">
+				<div><br>
+				<span class="mt-30 font-serif text-2xl text-pink-500">PRICE RS.25</span><br><br>
+				<P class="text-xl align-justify md:-ml-50">Crispy <b>dosa</b> filled with a spiced potato masala, served hot with aromatic sambar and delicious chutneys. A popular and satisfying South Indian favorit
+				Light, crispy, and golden dosa made from a traditional fermented batter, served with sambar and chutney for a simple yet tasty experience.<br>	A thin, crispy South Indian crepe made from fermented rice and lentil batter, cooked to golden perfection and served with flavorful sambar and fresh coconut chutney.</p>
+				</div>
+			</div><br><br>
+			
+			<div class="grid grid-cols-1 p-2 md:grid-cols-2 border-6  border-amber-300 mx-40  md:gap-55 text-md md:text-xl">
+				<img src="images/poori.jpg" class="h-90 md:h-80 w-110 p-1 rounded-2xl">
+				<div><br>
+				<span class="mt-30 font-serif text-2xl text-pink-500">PRICE RS.15</span><br><br>
+				<P class="text-xl align-justify md:-ml-50">Soft, fluffy deep-fried Indian bread made from wheat flour, served hot with flavorful potato masala and traditional accompaniments. A classic and satisfying breakfast favorite.<br>
+				Golden, puffed <b>pooris</b> served with a mildly spiced potato curry, offering a perfect balance of taste and texture. A popular South Indian delight.</p>
+				</div>
+			</div><br><br>
+			
+			<div class="grid grid-cols-1 p-2 md:grid-cols-2 border-6  border-amber-300 mx-40 md:gap-55 text-md md:text-xl">
+				<img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787893790/ghee_rice.png" class="h-90 md:h-80 w-110 rounded-2xl">
+				<div><br>
+				<span class="mt-30 font-serif text-2xl text-pink-500">PRICE RS.50</span><br><br>
+				<P class="text-xl align-justify md:-ml-50">Fragrant basmati rice cooked with <b>rich ghee</b>, aromatic whole spices, and garnished with roasted cashews and raisins. A flavorful and comforting South Indian delicacy.<br>
+				Long-grain rice infused with pure ghee and mild spices, topped with crunchy cashews for a rich and aromatic experience. Perfectly pairs with curries and gravies.<br>
+				Delicately spiced basmati rice cooked in clarified butter, offering a rich aroma and delicious taste, served with raita or curry for a complete meal.</p>
+				</div>
+			</div><br><br>
+			
+<!--non veg-->	
+			<div class="text-center  shadow-md shadow-black text-3xl font-serif  bg-green-100 p-5 w-auto mx-10 h-auto rounded-3xl">
+					NON VEG FOOD
+			</div><br><br>
+			<div class="grid grid-cols-1 md:grid-cols-2 p-10 gap-30 mx-10 bg-pink-200 shadow-md shadow-black rounded-3xl">
+			<div>
+				<img src="images/non veg c.jpg" class="w-120 h-100">
+			</div>
+			<div>
+				<h3 class="text-3xl mt-10 text-pink-500 font-serif">NON VEGETARIAN</h3>
+				<p class="text-xl md:-ml-20 md:mt-10 align-justify">A rich and flavorful collection of our finest non-vegetarian dishes, crafted with authentic spices and fresh ingredients. 
+				From juicy grilled chicken and spicy mutton curries to crispy fish fry and succulent prawn delicacies, every dish is prepared to deliver bold taste and irresistible aroma. 
+				Perfect for meat lovers looking to enjoy a complete and satisfying feast.<br>Experience the ultimate feast for meat lovers with our signature non-veg selection. 
+				From spicy curries to crispy fried items and smoky grilled specialties, every bite is packed with bold flavors and authentic taste that satisfies every craving.</p>	
+			</div>
+		</div><br><br>
+			<div>
+				<h3 class="text-center text-4xl font-bold text-cursive  p-5  rounded-3xl"> 
+					MAIN CATEGORIES
+				</h3>
+			</div><br>
+			<div class="grid grid-cols-1 p-2 md:grid-cols-2 border-6 border-amber-300 mx-40 md:gap-55 text-md md:text-xl">
+				<img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787894223/chicken_biriyani.jpg" class="h-90 md:70 w-110 p-1 rounded-2xl">
+			<div><br>
+				<span class="mt-30 font-serif text-2xl text-pink-500">PRICE RS.150</span><br><br>
+				<P class="text-xl align-justify md:-ml-50">Experience the taste of tradition with our signature <b>biryani</b>, crafted using premium ingredients and age-old recipes. Juicy pieces of meat combined with
+				perfectly cooked rice and aromatic spices make it a must-try delight.A royal blend of fragrant basmati rice, tender meat, and rich spices, slow-cooked to perfection.<br> Our biryani is layered 
+				with authentic flavors and served hot, delivering a truly satisfying and aromatic experience in every bite.</P>
+				</div>
+			</div><br><br>
+			
+			<div class="grid grid-cols-1 p-2 md:grid-cols-2 border-6 border-amber-300 mx-40 md:gap-55 text-md md:text-xl">
+				<img src="images/chicken65.jpg" class="h-90 md:h-80 w-110 p-1 rounded-2xl">
+			<div><br>
+				<span class="mt-30 font-serif text-2xl text-pink-500">PRICE RS.60</span><br><br>
+				<P class="text-xl align-justify md:-ml-50">A classic South Indian favorite made with juicy chicken pieces marinated in a blend of aromatic spices, deep-fried to crispy perfection. 
+				Tossed with curry leaves and green chilies, this spicy and flavorful dish is a perfect starter for every non-veg lover.<br>Crispy on the outside and tender on the inside, our
+				<b>Chicken 65</b> is packed with bold flavors and a fiery kick. Garnished with fresh curry leaves and served hot, it’s an irresistible appetizer that satisfies your spice cravings.</p>
+				</div>
+			</div><br><br>
+			
+			<div class="grid grid-cols-1 p-2 md:grid-cols-2 border-6 border-amber-300 mx-40 md:gap-55 text-md md:text-xl">
+				<img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787894423/mutton_rice_about.jpg" class="h-90 md:h-80 w-110 p-1 rounded-2xl">
+			<div><br>
+				<span class="mt-30 font-serif text-2xl text-pink-500">PRICE RS.130</span><br><br>
+				<P class="text-xl align-justify md:-ml-50">A flavorful blend of fragrant <b>Mutton Rice</b> stir-fried with tender, juicy mutton pieces, fresh vegetables, and aromatic spices. Cooked in a wok for 
+				a smoky taste, this dish delivers a perfect balance of rich flavor and satisfying texture in every bite.<br>Hot, spicy, and full of flavor, this fried rice is loaded with succulent
+				mutton pieces and tossed with chili, garlic, and spices. Perfect for spice lovers craving a satisfying and delicious meal.</p>
+				</div>
+			</div><br><br>
+			
+			<div class="grid grid-cols-1 p-2 md:grid-cols-2 border-6 border-amber-300 mx-40 md:gap-55 text-md md:text-xl">
+				<img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787894523/mutton_pepperfey.png"  class="h-90 md:h-80 w-110 p-1 rounded-2xl">
+			<div><br>
+				<span class="mt-30 font-serif text-2xl text-pink-500">PRICE RS.150</span><br><br>
+				<P class="text-xl align-justify md:-ml-50"><b>Mutton Pepper Fry:</b>A spicy and aromatic South Indian delicacy made with tender mutton pieces slow-cooked and tossed in freshly ground black pepper, curry leaves,
+				and traditional spices. Rich, bold, and full of flavor, this dish is a perfect choice for spice lovers.<br>Juicy mutton pieces cooked to perfection and coated with a fiery blend of
+				black pepper and spices. Finished with curry leaves for an authentic taste, this dish delivers a perfect balance of heat and flavor.
+				</p>
+				</div>
+			</div><br><br>
+			
+			<div class="grid grid-cols-1 p-2 md:grid-cols-2 border-6 border-amber-300 mx-40 md:gap-55 text-md md:text-xl">
+				<img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787894592/egg_freid_rice.jpg" class="h-90 md:h-80 w-110 p-1 rounded-2xl">
+			<div><br>
+				<span class="mt-30 font-serif text-2xl text-pink-500">PRICE RS.150</span><br><br>
+				<P class="text-xl align-justify md:-ml-50"><b>Egg Fried Rice:</b>A classic Indo-Chinese favorite made with fluffy rice stir-fried with scrambled eggs, fresh vegetables, and aromatic sauces. Light, flavorful, and perfectly balanced for a satisfying meal.<br>
+				Delicious rice tossed with eggs, crunchy vegetables, and savory seasonings in a hot wok. Each bite delivers a rich taste and a smoky aroma that makes it a customer favorite.</p>
+				</div>
+			</div><br><br>
+			
+<!--veg starters-->					
+			<div class="text-center  shadow-md shadow-black text-3xl font-serif  bg-green-100 p-5 w-auto mx-10 h-auto rounded-3xl">
+					VEG STARTERS
+		</div><br><br>
+			<div class="grid grid-cols-1 md:grid-cols-2 p-10 gap-30 mx-10 bg-pink-200 shadow-md shadow-black rounded-3xl">
+				<img src="images/veg staters c.png" class="w-110 h-100">
+			<div><br>
+				<h3 class="text-2xl mt-10 font-serif text-pink-400">VEGETARIAN</h3>
+				<p class="text-xl md:-ml-20 md:mt-10 align-justify">A delightful assortment of crispy and flavorful vegetarian appetizers, crafted with fresh ingredients and aromatic spices. 
+				From smoky paneer tikka to crunchy spring rolls and spicy Manchurian, every bite offers a perfect blend of taste and texture.<br>Enjoy a vibrant selection of vegetarian starters 
+				made with farm-fresh vegetables and rich seasonings. Crispy, spicy, and delicious, these starters are perfect to begin your meal on a tasty note.</p>	
+			</div>
+		</div><br><br>
+			<div>
+				<h3 class="text-center text-4xl font-bold text-cursive  p-5  rounded-3xl"> 
+					MAIN CATEGORIES
+				</h3>
+			</div><br>
+			<div class="grid grid-cols-1 p-2 md:grid-cols-2 border-6 border-amber-300 mx-40 md:gap-55 text-md md:text-xl">
+				<img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787894961/paneer_tikka_c.jpg" class="h-90 md:h-80 w-110 p-1 rounded-2xl">
+			<div><br>
+				<span class="mt-30 font-serif text-2xl text-pink-500">PRICE RS.150</span><br><br>
+				<P class="text-xl align-justify md:-ml-50"><b>Panner Tikka</b>Soft cubes of paneer marinated in a blend of yogurt and aromatic spices, grilled to perfection for a smoky and flavorful taste. Served with mint chutney and lemon,
+				this classic starter is a favorite among vegetarian lovers.<br>Fresh paneer pieces coated in rich tandoori spices and roasted to achieve a perfect char. Juicy on the inside and slightly crisp on the outside,
+				it’s a delicious and satisfying appetizer.</P>
+				</div>
+			</div><br><br>
+			
+			<div class="grid grid-cols-1 p-2 md:grid-cols-2 border-6 border-amber-300 mx-40 md:gap-55 text-md md:text-xl">
+				<div>
+				<img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787895003/onion_pakkoda.jpg" class="h-90 md:h-80 w-110 p-1 rounded-2xl">
+				</div>
+				<div><br>
+				<span class="mt-30 font-serif text-2xl text-pink-500">PRICE RS.60</span><br><br>
+				<P class="text-xl align-justify md:-ml-50"><b>Onion Pakkoda</b>Crispy, golden-fried onion pakodas made with thinly sliced onions mixed in a spiced gram flour batter. Flavored with green chilies, curry leaves, and aromatic spices, 
+				these crunchy fritters are deep-fried to perfection for a rich and savory taste.<br>
+				Best enjoyed hot with chutney and a cup of tea—perfect for rainy days and evening cravings.Crunchy onion fritters, deep-fried with spices – served hot with chutney.</p>
+				</div>
+			</div><br><br>
+			
+			<div class="grid grid-cols-1 p-2 md:grid-cols-2 border-6 border-amber-300 mx-40 md:gap-55 text-md md:text-xl">
+				<img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787895057/gobi_65.jpg" class="h-90 md:h-80 w-110 p-1 rounded-2xl">
+			<div><br>
+				<span class="mt-30 font-serif text-2xl text-pink-500">PRICE RS.30</span><br><br>
+				<P class="text-xl align-justify md:-ml-50">A popular South Indian starter made with fresh cauliflower florets marinated in a spicy batter of flour, red chili, ginger-garlic, and aromatic spices. 
+				Deep-fried until golden and crispy, then tossed with curry leaves and green chilies for an extra burst of flavor. Crunchy on the outside and soft inside,
+				<b>Gobi 65</b> is a perfect snack or appetizer served hot with chutney or sauce.</p>
+				</div>
+			</div><br><br>
+			
+			<div class="grid grid-cols-1 p-2 md:grid-cols-2 border-6 border-amber-300 mx-40 md:gap-55 text-md md:text-xl">
+				<img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787895116/vegspringroll.jpg" class="h-90 md:h-80 w-110 p-1 rounded-2xl">
+			<div><br>
+				<span class="mt-30 font-serif text-2xl text-pink-500">PRICE RS.30</span><br><br>
+				<P class="text-xl align-justify md:-ml-50"><b>Veg SpringRoll:</b>Crispy and golden-fried rolls filled with a delicious mix of finely chopped vegetables like cabbage, carrots, and capsicum, seasoned with light spices and sauces. 
+				Wrapped in a thin sheet and deep-fried to perfection, these crunchy rolls offer a flavorful bite with every crunch. Best served hot with spicy chili sauce or sweet and sour dip.<br>
+				Golden crispy rolls stuffed with seasoned veggies – served with dip.</p>
+				</div>
+			</div><br><br>
+			
+			<div class="grid grid-cols-1 p-2 md:grid-cols-2 border-6 border-amber-300 mx-40 md:gap-55 text-md md:text-xl">
+				<img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787895195/veg_pakora.jpg" class="h-90 md:h-80 w-110 p-1 rounded-2xl">
+			<div><br>
+				<span class="mt-30 font-serif text-2xl text-pink-500">PRICE RS.30</span><br><br>
+				<P class="text-xl align-justify md:-ml-50"><b>Veg Pakora:</b>A crunchy and flavorful snack made with a mix of fresh vegetables like onions, potatoes, spinach, and chilies, coated in a spiced gram flour batter. 
+					Deep-fried until golden and crisp, these pakodas are packed with bold Indian flavors and a satisfying crunch. Perfect as an evening snack, best enjoyed hot with chutney or ketchup.<br>
+					Crispy mixed vegetable fritters fried to perfection – served hot with chutney.</p>
+				</div>
+			</div><br><br><br>
+			
+<!--============================================non veg STARTERS==============================================-->				
+			<div class="text-center  shadow-md shadow-black text-3xl font-serif  bg-green-100 p-5 w-auto mx-10 h-auto rounded-3xl">
+				NON VEG STARTERS
+		</div><br><br>
+			<div class="grid grid-cols-1 md:grid-cols-2 p-10 gap-30 mx-10 bg-pink-200 shadow-md shadow-black rounded-3xl">
+			<div>
+				<img src="images/non veg starters.jpg" class="w-110 h-100">
+			</div>
+			<div>
+				<h3 class="text-2xl mt-10 font-serif text-pink-400">NON VEGETARIAN</h3>
+				<p class="text-xl md:-ml-20 md:mt-10 align-justify">A delicious assortment of non-veg starters featuring tender chicken, juicy mutton, and fresh seafood, prepared using a variety of cooking
+				styles like deep-frying, grilling, and tandoor roasting. Infused with rich Indian spices and bold Indo-Chinese flavors, each dish offers a perfect balance of crispiness, smokiness, and juicy texture.
+				From spicy fried bites to smoky kebabs and tangy saucy delights, this platter is crafted to satisfy every craving and is best enjoyed hot with chutneys and dips.From spicy fried bites to smoky kebabs and 
+				tangy saucy delights, this platter is crafted to satisfy every craving and is best enjoyed hot with chutneys and dips.</p>	
+			</div>
+		</div><br><br>
+			<div>
+				<h3 class="text-center text-4xl font-bold text-cursive  p-5  rounded-3xl"> 
+					MAIN CATEGORIES
+				</h3>
+			</div><br>
+			<div class="grid grid-cols-1 p-2 md:grid-cols-2 border-6 border-amber-300 mx-40 md:gap-55 text-md md:text-xl">
+				<img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787895613/chicken_lollipap.jpg" class="h-90 md:h-80 w-110 p-1 rounded-2xl">
+			<div><br>
+				<span class="mt-30 font-serif text-2xl text-pink-500">PRICE RS.130</span><br><br>
+				<P class="text-xl align-justify md:-ml-50"><b>Chicken Lollipap:</b>Fresh, juicy prawns marinated in a blend of aromatic spices, chili, and ginger-garlic paste, then shallow-fried to a golden, crispy finish. Tossed with curry leaves and a hint of pepper, 
+				this dish delivers a perfect balance of spicy, tangy, and savory flavors with every bite. Crispy on the outside and tender inside, it’s a seafood favorite best enjoyed hot with lemon and onion slices.
+				</P>
+				</div>
+			</div><br><br>
+	
+			<div class="grid grid-cols-1 p-2 md:grid-cols-2 border-6 border-amber-300 mx-40 md:gap-55 text-md md:text-xl">
+				<img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787894866/fish_fry.jpg"  class="h-90 md:h-80 w-110 p-1 rounded-2xl">
+			<div><br>
+				<span class="mt-30 font-serif text-2xl text-pink-500">PRICE RS.120</span><br><br>
+				<P class="text-xl align-justify md:-ml-50"><b>Fish Fry :</b> marinated in a flavorful blend of spices, red chili, turmeric, 
+				and ginger-garlic paste, then shallow-fried to a crispy golden finish. Infused with traditional South Indian 
+				flavors and a hint of curry leaves, this dish offers a perfect balance of spice and tang. Crispy on the outside and soft, juicy inside, it is best enjoyed hot with lemon wedges and onion slices.</p>
+				</div>
+			</div><br><br>
+			
+			<div class="grid grid-cols-1 p-2 md:grid-cols-2 border-6 border-amber-300 mx-40 md:gap-55 text-md md:text-xl">
+				<img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787894764/prawn_fry.jpg" class="h-90 md:h-80 w-auto p-1 rounded-2xl">
+			<div><br>
+				<span class="mt-30 font-serif text-2xl text-pink-500">PRICE RS.280</span><br><br>
+				<P class="text-xl align-justify md:-ml-50"><b>Prawn Fry:</b>Fresh, juicy prawns marinated in a blend of aromatic spices, chili, andginger-garlic paste,
+				then shallow-fried to a golden, crispy finish. Tossed with curry leaves and a hint of pepper,this dish delivers a perfect balance of 
+				spicy, tangy, and savory flavors. Crispy on the outside and tender inside, it’s a seafood favorite best enjoyed hot with lemon and onion slices.</p>
+				</div>
+			</div><br><br>
+			
+<!--veg soups-->			
+			<div class="text-center  shadow-md shadow-black text-3xl font-serif  bg-green-100 p-5 w-auto mx-10 h-auto rounded-3xl">
+					VEG SOUPS
+			</div><br><br>
+			<div class="grid grid-cols-1 md:grid-cols-2 p-10 gap-30 mx-10 bg-pink-200 shadow-md shadow-black rounded-3xl">
+			<div>
+				<img src="images/veg souos.webp"class="w-110 h-100">
+			</div>
+			<div>
+				<h3 class="text-2xl mt-10 font-serif text-pink-400">VEGETARIAN</h3>
+				<p class="text-xl md:-ml-20 md:mt-10 align-justify">A comforting selection of freshly prepared vegetarian soups made from
+				quality vegetables, herbs, and flavorful seasonings. From rich and creamy tomato and mushroom soups to light and healthy
+				clear soups, each bowl is crafted to deliver warmth and taste in every sip. Enjoy the perfect balance of mild, spicy, and 
+				tangy flavors with popular options like sweet corn, hot & sour, and Manchow soup, all served hot and garnished to enhance
+				freshness. A perfect way to start your meal or enjoy as a light and satisfying dish.</p>	
+			</div>
+		</div><br><br>
+		
+			<div>
+				<h3 class="text-center text-4xl font-bold text-cursive  p-5  rounded-3xl "> 
+					MAIN CATEGORIES
+				</h3>
+			</div><br>
+			<div class="grid grid-cols-1 p-2 md:grid-cols-2 border-6 border-amber-300 mx-40 md:gap-55 text-md md:text-xl">
+				<img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787896290/tomato_soup.jpg" class="h-90 md:h-80 w-110 p-1 rounded-2xl">
+			<div><br>
+				<span class="mt-30 font-serif text-2xl text-pink-500">PRICE RS>80</span><br><br>
+				<P class="text-xl align-justify md:-ml-50"><b>Tomato Soup:</b>A rich and creamy soup made from ripe, juicy tomatoes blended with butter, herbs, and
+				mild spices to create a smooth and comforting flavor. Lightly seasoned with pepper and garnished with fresh coriander or crunchy 
+				croutons, this classic soup offers the perfect balance of tangy and savory taste. Served hot, it is an ideal starter to warm up your meal.
+				</div>
+			</div><br><br>
+			
+			<div class="grid grid-cols-1 p-2 md:grid-cols-2 border-6 border-amber-300 mx-40 md:gap-55 text-md md:text-xl ">
+				<img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787896324/vegtable_soup.jpg" class="h-90 md:h-80 w-110 p-1 rounded-2xl">
+			<div><br>
+				<span class="mt-30 font-serif text-2xl text-pink-500">PRICE RS.80</span><br><br>
+				<P class="text-xl align-justify md:-ml-50"><b>Vegtable Soup:</b>A light and nourishing soup made with a medley of fresh vegetables like carrots, beans,
+				cabbage, and corn, gently simmered in a clear, flavorful broth. Seasoned with mild spices and herbs, this soup offers a refreshing
+				and wholesome taste while retaining the natural goodness of vegetables. Served hot, it’s a perfect healthy starter to begin your meal.</p>
+				</div>
+			</div><br><br>
+			
+			<div class="grid grid-cols-1 p-2 md:grid-cols-2 border-6 border-amber-300 mx-40 md:gap-55 text-md md:text-xl">
+				<img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787896362/mushroom_soup.jpg"class="h-90 md:h-80 w-110 p-1 rounded-2xl">
+			<div><br>
+				<span class="mt-30 font-serif text-2xl text-pink-500">PRICE RS.120</span><br><br>
+				<P class="text-xl align-justify md:-ml-50"><b>Mushroom Soup:</b>A rich and creamy soup made with fresh mushrooms, gently cooked with butter, herbs, 
+				and mild spices to bring out a deep, earthy flavor. Blended to a smooth consistency and lightly seasoned with pepper, this
+				comforting soup offers a perfect balance of creaminess and taste. Served hot, it’s a warm and satisfying starter for any meal.</p>
+				</div>
+			</div><br><br>
+			
+<!--non veg soups--->			
+			<div class="text-center  shadow-md shadow-black text-3xl font-serif  bg-green-100 p-5 w-auto mx-10 h-auto rounded-3xl">
+				NON	VEG SOUP
+			</div><br><br>
+			<div class="grid grid-cols-1 md:grid-cols-2 p-10 gap-30 mx-10 bg-pink-200 shadow-md shadow-black rounded-3xl">
+			<div>
+				<img src="images/nom veg sups.png" class="w-110 h-100">
+			</div>
+			<div>
+				<h3 class="text-2xl mt-10 font-serif text-pink-400">NON VEGETARIAN</h3>
+				<p class="text-xl md:-ml-20 md:mt-10 align-justify">A hearty selection of non-veg soups prepared with tender chicken, fresh seafood, and flavorful 
+				mutton, slow-cooked in rich and aromatic broths. Blended with carefully selected spices, herbs, and vegetables, these soups offer a perfect 
+				balance of warmth, nutrition, and taste. From light and soothing clear soups to creamy and spicy Indo-Chinese varieties like hot & sour and
+				Manchow, each bowl delivers deep, satisfying flavors and comforting richness. Served hot, these soups are an ideal way to start your meal or
+				enjoy as a wholesome dish on their own.
+				</p>	
+			</div>
+		</div><br><br>
+		
+			<div>
+				<h3 class="text-center text-4xl font-bold text-cursive  p-5  rounded-3xl"> 
+					MAIN CATEGORIES
+				</h3>
+			</div><br>
+			
+			<div class="grid grid-cols-1 p-2 md:grid-cols-2 border-6 border-amber-300 mx-40 md:gap-55 text-md md:text-xl +">
+				<img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787896682/mutton_soup.jpg" class="h-90 md:h-80 w-110 p-1 rounded-2xl">
+			<div><br>
+				<span class="mt-30 font-serif text-2xl text-pink-500">PRICE RS.150</span><br><br>
+				<P class="text-xl align-justify md:-ml-50"><b>Mutton Soup:</b>A rich and nourishing soup made with tender mutton pieces slow-cooked in a flavorful broth infused with
+				traditional spices, pepper, and herbs. This hearty soup delivers deep, aromatic flavors with a perfect balance of warmth and spice. Known for
+				its comforting and energizing qualities, mutton soup is served hot and is an ideal starter to enjoy a wholesome and satisfying meal.
+				</P>
+				</div>
+			</div><br><br>
+			
+			<div class="grid grid-cols-1 p-2 md:grid-cols-2 border-6 border-amber-300 mx-40 md:gap-55 text-md md:text-xl">
+				<div>
+				<img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787896782/chicken_soup.jpg" class="h-90 md:h-80 w-110 p-1 rounded-2xl">
+				</div>
+				<div><br>
+				<span class="mt-30 font-serif text-2xl text-pink-500">PRICE RS.110</span><br><br>
+				<P class="text-xl align-justify md:-ml-50"><b>Chicken Soup:</b>A warm and comforting soup made with tender chicken pieces simmered in a flavorful broth with fresh
+				vegetables, herbs, and mild spices. Light yet nourishing, this soup offers a perfect balance of taste and health, with a soothing aroma and
+				rich flavor in every sip. Served hot, it’s an ideal starter to refresh and energize your meal.</p>
+				</div>
+			</div><br><br>
+			
+			<div class="grid grid-cols-1 p-2 md:grid-cols-2 border-6 border-amber-300 mx-40 md:gap-55 text-md md:text-xl">
+				<img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787896850/mutton_peper_soup.jpg"class="h-90 md:h-80 w-110 p-1 rounded-2xl">
+			<div><br>
+				<span class="mt-30 font-serif text-2xl text-pink-500">PRICE RS.160</span><br><br>
+				<P class="text-xl align-justify md:-ml-50"><b>Mutton Peper Soup:</b>A hot and spicy South Indian-style soup made with tender mutton pieces slow-cooked in a rich, flavorful broth infused
+				with crushed black pepper, garlic, and aromatic spices. Known for its bold, peppery kick and warming qualities, this soup delivers deep, comforting flavors 
+				with every sip. Perfectly balanced with heat and richness, it is served hot and is ideal as a refreshing and energizing starter.</p>
+				</div>
+			</div><br><br>
+			
+<!--deserts INDIAN SWEETS-->			
+			<div class="text-center  shadow-md shadow-black text-3xl font-serif  bg-green-100 p-5 w-auto mx-10 h-auto rounded-3xl">
+				DESERTS INDIAN SWEETS
+			</div><br><br>
+			<div class="grid grid-cols-1 md:grid-cols-2 p-10 gap-30 mx-10 bg-pink-200 shadow-md shadow-black rounded-3xl">
+			<div>
+				<img src="images/indian deserts.png" class="w-110 h-100">
+			</div>
+			<div>
+				<h3 class="text-2xl mt-10 font-serif text-pink-400">VEGETARIAN</h3>
+				<p class="text-xl md:-ml-10 md:mt-10 align-justify">Soft, melt-in-the-mouth dumplings made from khoya (reduced milk), deep-fried until golden brown and soaked in a
+				fragrant sugar syrup flavored with cardamom and rose water. Each bite is rich, juicy, and irresistibly sweet, making it one of the most loved Indian desserts.
+				Served warm, Gulab Jamun offers a perfect balance of softness and sweetness, often enjoyed after a hearty meal.
+				</p>
+			</div>
+		</div><br><br>
+		
+			<div>
+				<h3 class="text-center text-4xl font-bold text-cursive  p-5  rounded-3xl"> 
+					MAIN CATEGORIES
+				</h3>
+			</div><br>
+			
+			<div class="grid grid-cols-1 p-2 md:grid-cols-2 border-6 border-amber-300 mx-40 md:gap-55 text-md md:text-xl">
+				<img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787897205/jamun.jpg" class="h-90 md:h-80 w-110 p-1 rounded-2xl">
+			<div><br>
+				<span class="mt-30 font-serif text-2xl text-pink-500">PRICE RS.30</span><br><br>
+				<P class="text-xl md:-ml-40 md:mt-10 align-justify">Soft and juicy milk-based dumplings made from khoya, deep-fried to a perfect golden brown and soaked in a fragrant sugar 
+				syrup infused with cardamom and rose essence. <b>Gulab Jamun</b>  is known for its melt-in-the-mouth texture and rich sweetness, offering a warm and indulgent dessert
+				experience. Served hot, it perfectly complements any meal and is a timeless favorite across all ages.
+				</P>
+				</div>
+			</div><br><br>
+			
+			<div class="grid grid-cols-1 p-2 md:grid-cols-2 border-6 border-amber-300 mx-40 md:gap-55 text-md md:text-xl">
+				<img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787897232/rasamalai.jpg" class="h-90 md:h-80 w-110 p-1 rounded-2xl">
+			<div><br>
+				<span class="mt-30 font-serif text-2xl text-pink-500">PRICE RS.80</span><br><br>
+				<P class="text-xl align-justify md:-ml-50">Soft and spongy paneer (cottage cheese) discs soaked in thick, creamy milk
+				flavored with saffron, cardamom, and a touch of sweetness. This rich and refreshing dessert offers a smooth, 
+				melt-in-the-mouth texture with a delicate balance of flavors. Garnished with chopped pistachios and almonds, 
+				<b>Rasmalai</b>  is served chilled and is a perfect choice for a light yet indulgent sweet treat.</p>
+				</div>
+			</div><br><br>
+			
+			<div class="grid grid-cols-1 p-2 md:grid-cols-2 border-6 border-amber-300 mx-40 md:gap-55 text-md md:text-xl">
+				<img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787897264/maisur_pak.jpg" class="h-90 md:h-80 w-110 p-1 rounded-2xl">
+			<div><br>
+				<span class="mt-30 font-serif text-2xl text-pink-500">PRICE RS.50</span><br><br>
+				<P class="text-xl align-justify md:-ml-50">A classic South Indian sweet made from gram flour, pure ghee, and sugar, cooked 
+				to perfection to create a rich, melt-in-the-mouth texture. Known for its soft, slightly crumbly consistency and irresistible
+				ghee aroma, <b>Mysore Pak</b>  offers a perfect balance of sweetness and richness. Each bite delivers a traditional, authentic 
+				taste that makes it a favorite festive and dessert treat.</p>
+				</div>
+			</div><br><br>
+			
+<!--CAKE & SPECIAL DESERTS-->					
+			<div class="text-center  shadow-md shadow-black text-3xl font-serif  bg-green-100 p-5 w-auto mx-10 h-auto rounded-3xl">
+				CAKE & SPECIAL DESERTS	
+			</div><br><br>
+			<div class="grid grid-cols-1 md:grid-cols-2 p-10 gap-30 mx-10 bg-pink-200 shadow-md shadow-black rounded-3xl">
+			<div>
+				<img src="images/cake and special deserts.png" class="w-110 h-100">
+			</div>
+			<div>
+				<h3 class="text-2xl mt-10 font-serif text-pink-400">SPECIAL DESERTS</h3>
+				<p class="text-xl md:-ml-20 md:mt-10 align-justify">A rich and indulgent dessert made with layers of moist chocolate 
+				sponge, filled and coated with smooth, creamy chocolate frosting. Deep in flavor and perfectly balanced in sweetness,
+				this classic cake offers a soft, melt-in-the-mouth texture with every bite. Ideal for chocolate lovers, it delivers a 
+				luxurious dessert experience that satisfies every craving.
+				</p>	
+			</div>
+		</div><br><br>
+		
+			<div>
+				<h3 class="text-center text-4xl font-bold text-cursive  p-5  rounded-3xl"> 
+					MAIN CATEGORIES
+				</h3>
+			</div><br>
+			
+			<div class="grid grid-cols-1 p-2 md:grid-cols-2 border-6 border-amber-300 mx-40 md:gap-55 text-md md:text-xl">
+				<img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787897487/brownie.jpg"class="h-90 md:h-80 w-110 p-1 rounded-2xl">
+			<div><br>
+				<span class="mt-30 font-serif text-2xl text-pink-500">PRICE RS.100</span><br><br>
+				<P class="text-xl align-justify md:-ml-50">DA rich and fudgy <b>chocolate brownie</b>  made with premium cocoa and baked to 
+				perfection for a soft, dense, and melt-in-the-mouth texture. Loaded with deep chocolate flavor, this indulgent
+				dessert offers the perfect balance of sweetness and richness. Served warm, it can be enjoyed on its own or paired 
+				with a scoop of creamy vanilla ice cream and chocolate drizzle for an extra decadent treat.
+				</P>
+				</div>
+			</div><br><br>
+			
+			<div class="grid grid-cols-1 p-2 md:grid-cols-2 border-6 border-amber-300 mx-40 md:gap-55 text-md md:text-xl">
+				<img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787897517/waffle_c.jpg" class="h-90 md:h-80 w-110 p-1 rounded-2xl">
+			<div><br>
+				<span class="mt-30 font-serif text-2xl text-pink-500">PRICE RS.120</span><br><br>
+				<P class="text-xl align-justify md:-ml-50">A freshly baked, golden crispy <b>waffle</b>  with a soft and fluffy inside, made from rich batter and cooked to
+				perfection. Served warm, this delightful dessert is topped with chocolate syrup, fresh fruits, whipped cream, or a scoop of creamy ice cream.
+				With its perfect balance of crunch and softness, every bite delivers a deliciously sweet and satisfying experience, making it a favorite treat for all ages.</p>
+				</div>
+			</div><br><br>
+			
+			<div class="grid grid-cols-1 p-2 md:grid-cols-2 border-6 border-amber-300 mx-40 md:gap-55 text-md md:text-xl">
+				<img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787897557/black_forest.jpg" class="h-90 md:h-80 w-110 p-1 rounded-2xl">
+			<div><br>
+				<span class="mt-30 font-serif text-2xl text-pink-500">PRICE RS.120</span><br><br>
+				<P class="text-xl align-justify md:-ml-50"><b>Black Forest:</b> A classic and indulgent dessert made with layers of soft chocolate sponge cake, filled with fresh whipped
+				cream and juicy cherries. Topped with rich chocolate shavings and more cherries, this cake offers a perfect balance of sweetness, creaminess, and 
+				a hint of fruity freshness. Light yet flavorful, every bite delivers a smooth, melt-in-the-mouth texture, making it a timeless favorite for all	dessert lovers.</p>
+				</div>
+			</div><br><br>
+			
+<!---SPECIAL DESERTS DRINGS-->					
+			<div class="text-center  shadow-md shadow-black text-3xl font-serif  bg-green-100 p-5 w-auto mx-10 h-auto rounded-3xl">
+				SPECIAL DESERTS DRINGS	
+			</div><br><br>
+			<div class="grid grid-cols-1 md:grid-cols-2 p-10 gap-30 mx-10 bg-pink-200 shadow-md shadow-black rounded-3xl">
+			<div>
+				<img src="images/spacial drings and deserts.png" class="w-110 h-100">
+			</div>
+			<div>
+				<h3 class="text-2xl mt-10 font-serif text-pink-400">DESERTS DRINGS</h3>
+				<p class="text-xl md:-ml-20 md:mt-10 align-justify">A refreshing collection of handcrafted beverages made with fresh fruits, premium ingredients, and rich flavors
+				to delight every taste. From creamy milkshakes and thick cold coffees to vibrant mocktails and fresh juices, each drink is carefully prepared to offer the
+				perfect balance of sweetness, freshness, and indulgence. Served chilled and beautifully presented, these drinks are ideal for cooling down, relaxing, and
+				complementing your meal with a burst of flavor and energy.
+				</p>	
+			</div>
+		</div><br><br>
+		
+			<div>
+				<h3 class="text-center text-4xl font-bold text-cursive  p-5  rounded-3xl"> 
+					MAIN CATEGORIES
+				</h3>
+			</div><br>
+			
+			<div class="grid grid-cols-1 p-2 md:grid-cols-2 border-6 border-amber-300 mx-40 md:gap-55 text-md md:text-xl">
+				<img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787898033/falooda.jpg"class="h-90 md:h-80 w-110 p-1 rounded-2xl">
+			<div><br>
+				<span class="mt-30 font-serif text-2xl text-pink-500">PRICE RS.130</span><br><br>
+				<P class="text-xl align-justify md:-ml-50">A rich and refreshing dessert drink made with layers of chilled milk, rose syrup, soft vermicelli, and soaked basil seeds
+				(sabja), topped with a scoop of creamy ice cream and garnished with nuts. This colorful and flavorful treat offers a delightful mix of textures—smooth, chewy,
+				and creamy in every sip and spoonful. Served cold, <b>Falooda</b>  is a perfect blend of sweetness and refreshment, making it an ideal indulgence for hot days and a 
+				favorite dessert for all ages.
+				</P>
+				</div>
+			</div><br><br>
+			
+			<div class="grid grid-cols-1 p-2 md:grid-cols-2 border-6 border-amber-300 mx-40 md:gap-55 text-md md:text-xl">
+				<img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787898093/chacolate_milkshake.jpg" class="h-90 md:h-80 w-110o p-1 rounded-2xl">
+			<div><br>
+				<span class="mt-30 font-serif text-2xl text-pink-500">PRICE RS.100</span><br><br>
+				<P class="text-xl align-justify md:-ml-50">A rich and creamy <b>milkshake</b>  made with chilled milk, premium chocolate, and smooth ice cream, blended to perfection for 
+				a thick and velvety texture. Loaded with deep chocolate flavor, this refreshing drink is topped with whipped cream, chocolate syrup, and sometimes crunchy nuts
+				for an extra indulgent touch. Served cold, it offers a perfect balance of sweetness and creaminess, making it a favorite treat for chocolate lovers.</p>
+				</div>
+			</div><br><br>
+			
+			<div class="grid grid-cols-1 p-2 md:grid-cols-2 border-6 border-amber-300 mx-40 md:gap-55 text-md md:text-xl">
+				<img src="images\straberry milkshake.jpg" class="h-9 md:h-80 w-110 p-1 rounded-2xl">
+			<div><br>
+				<span class="mt-30 font-serif text-2xl text-pink-500">PRICE RS.100</span><br><br>
+				<P class="text-xl align-justify md:-ml-50">A refreshing and creamy milkshake made with fresh <b>strawberries,</b>  chilled milk, and smooth ice cream, blended to a rich and
+				velvety consistency. Bursting with natural fruity sweetness and a light tangy flavor, this delightful drink is topped with whipped cream and strawberry syrup for
+				an extra indulgent touch. Served cold, it offers a perfect balance of freshness and creaminess, making it a delicious and cooling treat.</p>
+				</div>
+			</div><br><br>
+			
+<!-- FRESH JUICES-->			
+			<div class="text-center  shadow-md shadow-black text-3xl font-serif  bg-green-100 p-5 w-auto mx-10 h-auto rounded-3xl">
+				FRESH JUICES	
+			</div><br><br>
+			<div class="grid grid-cols-1 md:grid-cols-2 p-10 gap-30 mx-10 bg-pink-100  shadow-md shadow-black rounded-3xl">
+			<div>
+				<img src="images/juices.jpg" class="w-110 h-100">
+			</div>
+			<div>
+				<h3 class="text-2xl mt-10 font-serif text-pink-400">FRESH JUICES</h3>
+				<p class="text-xl md:-ml-10 md:mt-10 align-justify">A refreshing selection of freshly extracted fruit juices made from the finest seasonal fruits to
+				deliver pure taste and natural goodness in every sip. Prepared without artificial flavors or preservatives, these juices retain the original
+				nutrients, vitamins, and refreshing essence of fruits like orange, mango, watermelon, pineapple, and more. Each glass is served chilled,
+				offering a perfect balance of sweetness and freshness, making it an ideal choice to cool down and energize your day. Light, healthy, and
+				naturally delicious, our fresh juices are the perfect companion to any meal or a refreshing treat on their own.
+				</p>	
+			</div>
+		</div><br><br>
+		
+			<div>
+				<h3 class="text-center text-4xl font-bold text-cursive  p-5  rounded-3xl "> 
+					MAIN CATEGORIES
+				</h3>
+			</div><br>
+			
+			<div class="grid grid-cols-1 p-2 md:grid-cols-2 border-6 border-amber-300 mx-40 md:gap-55 text-md md:text-xl">
+				<img src="images/dragon fruite juice.jpg" class="h-90 md:h-80 w-110 p-1 rounded-2xl">
+			<div><br>
+				<span class="mt-30 font-serif text-2xl text-pink-500">PRICE RS.120</span><br><br>
+				<P class="-text-xl align-justify  md:-ml-50">A vibrant and refreshing juice made from fresh <b>dragon fruit,</b>  known for its striking pink color and mildly
+				sweet flavor. Blended to a smooth consistency with chilled water or milk, this exotic drink offers a light, refreshing taste with a hint of 
+				natural sweetness. Rich in antioxidants and nutrients, dragon fruit juice is both healthy and delicious. Served chilled, it is a perfect choice
+				to cool down and enjoy a unique tropical flavor experience.
+				</P>
+				</div>
+			</div><br><br>
+			
+			<div class="grid grid-cols-1 p-2 md:grid-cols-2 border-6 border-amber-300 mx-40 md:gap-55 text-md md:text-xl">
+				<img src="images/mango  juice.jpg" class="h-90 md:h-80 w-110 p-1 rounded-2xl">
+			<div><br>
+				<span class="mt-30 font-serif text-2xl text-pink-500">PRICE RS.90</span><br><br>
+				<P class="text-xl align-justify md:-ml-50">A rich and refreshing juice made from ripe, juicy mangoes blended to a smooth and thick consistency.
+				Bursting with natural sweetness and tropical flavor, this drink delivers a delightful balance of freshness and creaminess in every sip. Prepared
+				using fresh fruit without artificial additives, <b>mango juice</b>  is both nutritious and satisfying. Served chilled, it is the perfect summer drink to
+				cool down and enjoy the king of fruits in its purest form.</p>
+				</div>
+			</div><br><br>
+			
+			<div class="grid grid-cols-1 p-2 md:grid-cols-2 border-6 border-amber-300 mx-40 md:gap-55 text-md md:text-xl">
+				<img src="images/kiwi juice.jpg" class="h-90 md:h-80 w-110 p-1 rounded-2xl">
+			<div><br>
+				<span class="mt-30 font-serif text-2xl text-pink-500">PRICE RS.110</span><br><br>
+				<P class="text-xl align-justify md:-ml-50">A refreshing and tangy juice made from fresh kiwi fruit, blended to a smooth and vibrant green drink. Known for its unique
+				sweet and slightly sour taste, <b>kiwi juice</b>  offers a perfect balance of flavor and freshness. Rich in vitamin C and antioxidants, it is both healthy and energizing.
+				Served chilled, this drink delivers a cool, zesty experience that refreshes your senses and makes it a perfect choice for a light and revitalizing beverage.</p>
+				</div>
+			</div><br><br>
+			
+<!--MIXED & SPECIAL JUICES--->					
+			<div class="text-center  shadow-md shadow-black text-3xl font-serif  bg-green-100 p-5 w-auto mx-10 h-auto rounded-3xl">
+				MIXED & SPECIAL JUICES
+			</div><br><br>
+			<div class="grid grid-cols-1 md:grid-cols-2 p-10 gap-30 mx-10 bg-pink-200 shadow-md shadow-black rounded-3xl">
+			<div>
+				<img src="images/mixed juice.png" class="w-110 h-100">
+			</div>
+			<div>
+				<h3 class="text-2xl mt-10 font-serif text-pink-400">MIXED JUICES</h3>
+				<p class="text-xl md:-ml-20 md:mt-10 align-justify">A vibrant and refreshing blend of carefully selected fresh fruits, combined to create a perfectly balanced and 
+				naturally sweet juice. Made using seasonal fruits like apple, orange, pineapple, watermelon, mango, and more, this drink delivers a rich fusion of flavors in
+				every sip. Each ingredient is freshly extracted to preserve its natural vitamins, nutrients, and freshness without any artificial additives. The result is a 
+				colorful, energizing beverage that offers a delightful mix of sweetness, slight tanginess, and refreshing taste. Served chilled, mixed juice is a perfect choice
+				for those who love a variety of fruit flavors in one healthy and delicious drink.
+				</p>	
+			</div>
+		</div><br><br>
+		
+			<div>
+				<h3 class="text-center text-4xl font-bold text-cursive  p-5  rounded-3xl "> 
+					MAIN CATEGORIES
+				</h3>
+			</div><br>
+			
+			<div class="grid grid-cols-1 p-2 md:grid-cols-2 border-6 border-amber-300 mx-40 md:gap-55 text-md md:text-xl">
+				<img src="images/lemon juice.jpg" class="h-90 md:h-80 w-110 p-1 rounded-2xl">
+			<div><br>
+				<span class="mt-30 font-serif text-2xl text-pink-500">PRICE RS.40</span><br><br>
+				<P class="text-xl align-justify md:-ml-50">A refreshing and zesty drink made from freshly squeezed <b>lemons,</b>  blended with chilled water and a perfect balance of sugar
+				and salt. Known for its tangy and invigorating taste, lemon juice offers a cooling and energizing experience, especially on hot days. Light, hydrating, and rich
+				in vitamin C, it can be customized to sweet, salty, or mixed flavors. Served chilled with mint and ice, it is a simple yet refreshing classic loved by all.
+				</P>
+				</div>
+			</div><br><br>
+			
+			<div class="grid grid-cols-1 p-2 md:grid-cols-2 border-6 border-amber-300 mx-40 md:gap-55 text-md md:text-xl">
+				<img src="images/mixed juice.jpg"  class="h-90 md:h-80 w-110 p-1 rounded-2xl">
+			<div><br>
+				<span class="mt-30 font-serif text-2xl text-pink-500">PRICE RS.100</span><br><br>
+				<P class="text-xl align-justify md:-ml-50"><b>Mixed Juice:</b> A refreshing and vibrant juice made by blending a variety of fresh seasonal fruits like apple, orange, pineapple, 
+				watermelon, mango, and more to create a perfect harmony of flavors. Each fruit adds its own natural sweetness, slight tanginess, and refreshing taste, resulting 
+				in a deliciously balanced drink. Packed with vitamins and nutrients, this juice is prepared without artificial additives, ensuring pure freshness in every sip. 
+				Served chilled, it offers a colorful, energizing, and healthy experience that is both satisfying and revitalizing.</p>
+				</div>
+			</div><br><br>
+			
+			<div class="grid grid-cols-1 p-2 md:grid-cols-2 border-6 border-amber-300 mx-40 md:gap-55 text-md md:text-xl">
+				<img src="images/pineapple-juice.jpg" class="h-90 md:h-80 w-110 p-1 rounded-2xl">
+			<div><br>
+				<span class="mt-30 font-serif text-2xl text-pink-500">PRICE RS.90</span><br><br>
+				<P class="text-xl align-justify md:-ml-50">A refreshing and tropical juice made from freshly cut <b>pineapple,</b>  blended to a smooth and naturally sweet 
+				drink with a slight tangy twist. Known for its vibrant flavor and cooling effect, pineapple juice delivers a perfect balance of sweetness and
+				freshness in every sip. Rich in vitamins and enzymes, it is both healthy and energizing. Served chilled with ice and a hint of mint, this juice
+				is a perfect choice to refresh and rejuvenate your day.</p>
+				</div>
+			</div><br><br>
+			
+<!--CLASSIC ICECREAM FLAVOURS-->					
+			<div class="text-center  shadow-md shadow-black text-3xl font-serif  bg-green-100 p-5 w-auto mx-10 h-auto rounded-3xl">
+				CLASSIC ICECREAM FLAVOURS	
+			</div><br><br>
+			<div class="grid grid-cols-1 md:grid-cols-2 p-10 gap-30 mx-10 bg-pink-200 shadow-md shadow-black rounded-3xl">
+			<div>
+				<img src="images/ice cream.jpg" class="w-110 h-100">
+			</div>
+			<div>
+				<h3 class="text-2xl mt-10 font-serif text-pink-400">CLASSIC ICECREAM</h3>
+				<p class="text-xl md:-ml-20 md:mt-10 align-justify">A delightful collection of timeless ice cream flavors loved by all ages, crafted with rich dairy,
+				smooth textures, and perfectly balanced sweetness. From the creamy richness of vanilla and the deep indulgence of chocolate to the refreshing
+				sweetness of strawberry, each scoop delivers a classic taste that never goes out of style. Prepared using quality ingredients, these ice creams 
+				offer a soft, velvety consistency and a satisfying melt-in-the-mouth experience. Whether enjoyed on their own or paired with desserts like 
+				brownies, waffles, or sundaes, these classic flavors provide a comforting and delicious treat for every occasion.
+				</p>	
+			</div>
+		</div><br><br>
+		
+			<div>
+				<h3 class="text-center text-4xl font-bold text-cursive  p-5  rounded-3xl"> 
+					MAIN CATEGORIES
+				</h3>
+			</div><br>
+			
+			<div class="grid grid-cols-1 p-2 md:grid-cols-2 border-6 border-amber-300 mx-40 md:gap-55 text-md md:text-xl  +">
+				<img src="images/vennila.jpg"  class="h-90 md:h-80 w-110 p-1 rounded-2xl">
+			<div><br>
+				<span class="mt-30 font-serif text-2xl text-pink-500">PRICE RS.60</span><br><br>
+				<P class="text-xl align-justify md:-ml-50">A timeless classic ice cream made with rich milk and flavored with smooth, aromatic vanilla. Known for its
+				creamy texture and delicate sweetness, <b>vanilla ice cream</b>  offers a soft, melt-in-the-mouth experience in every scoop. Simple yet delicious, it pairs
+				perfectly with brownies, cakes, and waffles or can be enjoyed on its own as a refreshing treat. Served chilled, it is a favorite choice for all	age groups.
+				</P>
+				</div>
+			</div><br><br>
+			
+			<div class="grid grid-cols-1 p-2 md:grid-cols-2 border-6 border-amber-300 mx-40 md:gap-55 text-md md:text-xl">
+				<img src="images/blackcurrent.jpg" class="h-90 md:h-80 w-110 p-1 rounded-2xl">
+			<div><br>
+				<span class="mt-30 font-serif text-2xl text-pink-500">PRICE RS.70</span><br><br>
+				<P class="text-xl align-justify md:-ml-50">A rich and refreshing ice cream made with the unique flavor of <b>black currant</b>  berries, offering a perfect
+				balance of sweetness and mild tanginess. Known for its vibrant purple color and fruity aroma, this ice cream delivers a smooth, creamy texture 
+				with a refreshing berry taste in every bite. Light yet indulgent, it is a great choice for those who enjoy a slightly tangy twist in their
+				desserts. Served chilled, it provides a delightful and refreshing experience.</p>
+				</div>
+			</div><br><br>
+			
+			<div class="grid grid-cols-1 p-2 md:grid-cols-2 border-6 border-amber-300 mx-40 md:gap-55 text-md md:text-xl">
+				<img src="images/butterscotch.jpg" class="h-90 md:h-80 w-110 p-1 rounded-2xl">
+			<div><br>
+				<span class="font-serif text-2xl text-pink-500">PRICE RS.70</span><br><br>
+				<P class="text-xl align-justify md:-ml-50">A rich and creamy ice cream infused with the delicious flavor of caramelized sugar and butter,
+				giving it a smooth butterscotch taste. Enhanced with crunchy praline bits or caramel chips, this dessert offers a delightful combination of
+				creamy texture and crispy bites. With its sweet, slightly nutty flavor and golden color, <b>butterscotch ice cream</b>  is a perfect treat for those
+				who enjoy a classic yet indulgent dessert experience. Served chilled, it delivers a satisfying blend of richness and crunch in every scoop.</p>
+				</div>
+			</div><br><br>
+	
+<!--PREMIUM $ SPECIAL-->			
+			<div class="text-center  shadow-md shadow-black text-3xl font-serif  bg-green-100 p-5 w-auto mx-10 h-auto rounded-3xl">
+				PREMIUM $ SPECIAL	
+			</div><br><br>
+			<div class="grid grid-cols-1 md:grid-cols-2 p-10 gap-30 mx-10 bg-pink-200 shadow-md shadow-black rounded-3xl">
+			<div>
+				<img src="images/premium ice.png" class="w-110 h-100">
+			</div>
+			<div>
+				<h3 class="text-2xl font-serif text-pink-400">PREMIUM $ SPECIAL</h3>
+				<p class="text-xl md:-ml-20 md:mt-10 align-justify">indulge in the ultimate culinary experience with our exclusive Premium Specials, crafted for those
+				who crave richness, elegance, and unforgettable taste. Each dish is a masterpiece—made using handpicked ingredients, authentic recipes, and a touch
+				of gourmet creativity.From velvety textures to bold, aromatic flavors, every bite delivers pure satisfaction and luxury. Whether it’s our chef’s
+				signature creations, rich gravies, exotic blends, or perfectly balanced fusion dishes, this section is designed to elevate your dining experience
+				beyond the ordinary.
+				</p>	
+			</div>
+		</div><br><br>
+		
+			<div>
+				<h3 class="text-center text-4xl font-bold text-cursive  p-5  rounded-3xl"> 
+					MAIN CATEGORIES
+				</h3>
+			</div><br>
+			
+			<div class="grid grid-cols-1 p-2 md:grid-cols-2 border-6 border-amber-300 mx-40 md:gap-55 text-md md:text-xl ">
+				<img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787897904/kulfi.jpg" class="h-90 md:h-80 w-110 p-1 rounded-2xl">
+			<div><br>
+				<span class="font-serif text-2xl text-pink-500">PRICE RS.99</span><br><br>
+				<P class="text-xl align-justify md:-ml-50">Experience the rich taste of tradition with our <b>Kulfi,</b> a classic Indian frozen dessert known for its creamy
+				texture and intense flavors. Slowly prepared with thickened milk, blended with aromatic cardamom, saffron, and crunchy dry fruits, every bite 
+				offers a dense, melt-in-the-mouth delight.Unlike regular ice cream, Kulfi is richer, creamier, and packed with authentic taste that brings a
+				royal dessert experience. Perfect to end your meal on a sweet and refreshing note.
+				</div>
+			</div><br><br>
+			
+			<div class="grid grid-cols-1 p-2 md:grid-cols-2 border-6 border-amber-300 mx-40 md:gap-55 text-md md:text-xl">
+				<img src="images/ceramal crunch.jpg"class="h-90 md:h-80 w-110 p-1 rounded-2xl">
+			<div><br>
+				<span class="font-serif text-2xl text-pink-500">PRICE RS.130</span><br><br>
+				<P class="text-xl align-justify md:-ml-50">Treat yourself to the irresistible richness of our <b>Caramel Crunch,</b>  a perfect blend of smooth, creamy ice
+				cream and golden caramel goodness. Every scoop is loaded with crunchy caramel bits and topped with a luscious caramel drizzle, creating a 
+				delightful mix of silky texture and satisfying crunch.The sweet, buttery flavor of caramel melts beautifully in every bite, while the crispy 
+				crunch adds an exciting twist that keeps you coming back for more. A perfect dessert choice for caramel lovers who enjoy a balance of creaminess
+				and crunch in every spoonful.</p>
+				</div>
+			</div><br><br>
+			
+			<div class="grid grid-cols-1 p-2 md:grid-cols-2 border-6 border-amber-300 mx-40 md:gap-55 text-md md:text-xl">
+				<img src="images/cokkies and cream.jpg" class="h-90 md:h-80 w-110 p-1 rounded-2xl">
+			<div><br>
+				<span class="font-serif text-2xl text-pink-500">PRICE RS.120</span><br><br>
+				<P class="text-xl align-justify md:-ml-50">Dive into the timeless favorite with our <b>Cookies & Cream Ice Cream,</b> a heavenly blend of smooth, creamy 
+				vanilla base loaded with crunchy chocolate cookie chunks. Every spoonful delivers the perfect balance of rich creaminess and satisfying cookie
+				crunch.The crushed cookies add a delightful chocolatey twist, making each bite irresistibly delicious and fun. Whether you're a dessert lover or 
+				a cookie fan, this classic treat promises pure happiness in every scoop.</p>
+				</div>
+			</div><br><br>
+			
+<!--SUNDAES & COMBO-->				
+			<div class="text-center  shadow-md shadow-black text-3xl font-serif  bg-green-100 p-5 w-auto mx-10 h-auto rounded-3xl">
+				SUNDAES & COMBO
+			</div><br><br>
+			<div class="grid grid-cols-1 md:grid-cols-2 p-10 gap-30 mx-10 bg-pink-200 shadow-md shadow-black rounded-3xl">
+			<div>
+				<img src="images/sundaes combo.png" class="w-110 h-100">
+			</div>
+			<div>
+				<h3 class="text-2xl font-serif text-pink-400">SUNDAES & COMBO</h3>
+				<p class="text-xl md:-ml-20 md:mt-10 align-justify">Step into a world of indulgence with our irresistible Sundaes & Combos, where every dessert is
+				crafted to delight your senses. From rich, creamy scoops layered with luscious chocolate, caramel, and fruity sauces to perfectly paired combos 
+				that bring together multiple flavors in one satisfying treat—this section is made for true dessert lovers.Our sundaes are topped with crunchy nuts,
+				chewy brownies, fresh fruits, and a drizzle of premium syrups, creating a perfect harmony of textures and tastes. The combos take your experience
+				a step further by offering a variety of flavors and toppings in one serving—ideal for sharing with friends or enjoying a complete dessert feast
+				on your own.</p>	
+			</div>
+		</div><br><br>
+		
+			<div>
+				<h3 class="text-center text-4xl font-bold text-cursive  p-5  rounded-3xl"> 
+					MAIN CATEGORIES
+				</h3>
+			</div><br>
+			
+			<div class="grid grid-cols-1 p-2 md:grid-cols-2 border-6 border-amber-300 mx-40 md:gap-55 text-md md:text-xl">
+				<img src="images/cokkies and cream.jpg" class="h-90 md:h-80 w-110 p-1 rounded-2xl">
+			<div><br>
+				<span class="font-serif text-2xl text-pink-500">PRICE RS.120</span><br><br>
+				<P class="text-xl align-justify md:-ml-50">Enjoy the perfect blend of smooth creaminess and crunchy delight with our <b>Cookies & Cream Ice Cream.</b>  
+				Made with a rich vanilla base and loaded with crushed chocolate cookies, every bite delivers a delicious mix of silky texture and chocolaty
+				crunch.The classic combination of creamy sweetness and cookie goodness makes this dessert a favorite for all ages. Whether you're craving 
+				something comforting or indulgent, this treat is sure to satisfy your sweet tooth with every spoonful.
+				</P>
+				</div>
+			</div><br><br>
+			
+			<div class="grid grid-cols-1 p-2 md:grid-cols-2 border-6 border-amber-300 mx-40 md:gap-55 text-md md:text-xl">
+				<img src="images/fruit sundea.jpg" class="h-90 md:h-80 w-110 p-1 rounded-2xl">
+			<div><br>
+				<span class="font-serif text-2xl text-pink-500">PRICE RS.140</span><br><br>
+				<P class="text-xl align-justify md:-ml-50">Refresh your taste buds with our vibrant and delicious <b>Fruit Sundae,</b>  a perfect blend of creamy ice
+				cream and fresh, juicy fruits. Layered with a variety of seasonal fruits like strawberry, banana, apple, and kiwi, this dessert offers a natural
+				sweetness combined with smooth, velvety ice cream.Topped with rich fruit syrups, crunchy nuts, and a hint of whipped cream, every spoonful
+				delivers a burst of freshness and flavor. It’s the perfect balance of healthy indulgence and sweet satisfaction—ideal for those who love a fruity 
+				twist in their desserts.</p>
+				</div>
+			</div><br><br>
+			
+			<div class="grid grid-cols-1 p-2 md:grid-cols-2 border-6 border-amber-300 mx-40 md:gap-55 text-md md:text-xl">
+				<img src="images/chocolate sundea.jpg" class="h-90 md:h-80 w-110 p-1 rounded-2xl">
+			<div><br>
+				<span class="font-serif text-2xl text-pink-500">PRICE RS.140</span><br><br>
+				<P class="text-xl align-justify md:-ml-50">Indulge in pure chocolate heaven with our irresistible <b>Chocolate Sundae,</b>  crafted for true chocolate lovers.
+				Made with rich, creamy chocolate ice cream, this dessert is layered and topped with smooth, velvety chocolate syrup that melts perfectly in every
+				bite.Finished with crunchy nuts, a dollop of whipped cream, and a cherry on top, this sundae offers the perfect balance of deep chocolate 
+				flavor and delightful textures. Every spoonful is a luxurious treat that satisfies your sweet cravings and leaves you wanting more.</p>
+				</div>
+			</div><br><br>
+			
+			
+			
+			<!--footer-->			
+	<footer class="bg-white text-white p-10 w-full mx-auto">
+			<div class="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-8">
+			
+<!-- Logo + About -->
+			<div>
+			  <h2 class="text-lg font-semibold text-red-400">FOOD FIESTA</h2>
+			  <p class="mt-3 text-black">
+				Serving delicious food with authentic taste and quality ingredients.
+			  </p>
+			</div>
+
+<!-- Quick Links -->
+			<div>
+			  <h3 class="text-lg font-semibold  text-red-400 mb-3">QUICK LINK</h3>
+			  <ul class="space-y-2 text-black">
+				<li><a href="home .html" class="hover:text-orange-400">Home</a></li>
+				<li><a href="Menu.html" class="hover:text-orange-400">Menu</a></li>
+				<li><a href="Catagery.html" class="hover:text-orange-400">Category</a></li>
+				<li><a href="About us.html" class="hover:text-orange-400">About</a></li>
+				<li><a href="contact .html"class="hover:text-orange-400">Contact</a></li>
+			  </ul>
+			</div>
+
+<!-- Contact Info -->
+				<div>
+				  <h3 class="text-lg  text-red-400 font-semibold mb-3">CONTACT</h3>
+				  <p class="text-black">📍 Chennai, India</p>
+				  <p class="text-black">📞 +91 12345 67890</p>
+				  <p class="text-black">📧 contact@foodfesta.com</p>
+				</div>
+
+<!-- Social Media -->
+				<div>
+				  <h3 class="text-lg text-red-400 font-semibold mb-3">FOLLOW US</h3>
+				  <div class="flex gap-4 text-xl">
+					<span class="hover:text-orange-400 cursor-pointer">📘</span>
+					<span class="hover:text-orange-400 cursor-pointer">📸</span>
+					<span class="hover:text-orange-400 cursor-pointer">🐦</span>
+				  </div>
+				</div>
+			</div>
+
+<!-- Bottom -->
+			  <div class="md:text-center mt-8  pt-4 text-black">
+				© 2026 Food Festa Restaurant. All rights reserved.
+			  </div>
+			</footer>
+	</body>
+</html>
+<script>
+// Dark mode
+	function toggleDark(){ 
+	 document.body.classList.toggle("bg-gray-900"); 
+	 document.body.classList.toggle("text-white"); 
+	}
+</script>
+	

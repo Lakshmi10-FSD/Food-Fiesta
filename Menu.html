@@ -1,0 +1,2872 @@
+<html>
+	<head><title>RESTAURANT</title>
+	<meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+	</head>
+</body>
+</html>
+		<nav class="fixed top-0 left-0 w-full bg-orange-300 shadow-md z-50">
+		<div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+			<img src="images/logo restaurent.png" class="w-40 h-20 max-w-full object-cover">
+
+    <!-- Desktop Menu -->
+			<ul class="hidden md:flex space-x-6 text-blue-900 font-serif text-lg">
+			  <li><a href="index.html" class="hover:text-green-600">Home</a></li>
+			  <li><a href="Menu.html" class="hover:text-green-600">Menu</a></li>
+			  <li><a href="Catagery.html" class="hover:text-green-600">Category</a></li>
+			  <li><a href="About us.html" class="hover:text-green-600">About Us</a></li>
+			  <li><a href="contact .html" class="hover:text-green-600">Contact</a></li>
+			</ul>
+
+    <!-- Toggle Button -->
+		<button onclick="toggleDark()" class="text-lg md:text-xl">🌙</button>
+			<label for="menuToggle" class="md:hidden flex flex-col space-y-1.5 cursor-pointer">
+			  <span class="block w-6 h-0.5 bg-gray-800"></span>
+			  <span class="block w-6 h-0.5 bg-gray-800"></span>
+			  <span class="block w-6 h-0.5 bg-gray-800"></span>
+			</label>
+		</div>
+
+  <!-- Hidden Checkbox -->
+			<input type="checkbox" id="menuToggle" class="hidden peer">
+
+  <!-- Mobile Menu -->
+		  <div class="hidden peer-checked:block md:hidden bg-orange-200 px-6 py-6">
+			<ul class="flex flex-col space-y-4 text-white text-lg">
+			  <li><a href="index.html" class="block hover:text-pink-300">Home</a></li>
+			  <li><a href="Menu.html" class="hover:text-orange-400">Menu</a></li>
+				<li><a href="Catagery.html" class="hover:text-orange-400">Category</a></li>
+				<li><a href="About us.html" class="hover:text-orange-400">About</a></li>
+				<li><a href="contact .html"class="hover:text-orange-400">Contact</a></li>
+			</ul>
+		  </div>
+		</nav>
+
+<!-- Spacer (important for fixed navbar) -->
+		<div class="h-24"></div>
+		
+		
+<!--Header -->
+			<div class="text-center py-6">
+			  <h1 class="text-4xl font-bold text-yellow-400">🍴 Royal Feast</h1>
+			  <p class="text-gray-400">Taste the Luxury</p>
+			</div>		
+		
+<!-- Category Tabs -->
+		<div class="flex justify-center gap-4 flex-wrap px-4">
+		  <a href="Menu.html"> <button class="bg-yellow-400 px-5 py-2 rounded-full font-semibold">All</button></a>
+		  <a href="veg.html"> <button class="bg-white/10 px-5 py-2 rounded-full">Veg</button></a>
+		  <a href="nonveg.html"> <button class="bg-white/10 px-5 py-2 rounded-full">Non-Veg</button></a>
+		  <a href="starters.html">  <button class="bg-white/10 px-5 py-2 rounded-full">starters</button></a>
+		  <a href="soups.html">  <button class="bg-white/10 px-5 py-2 rounded-full">soups</button></a>
+		  <a href="desserts.html"> <button class="bg-white/10 px-5 py-2 rounded-full">Desserts</button></a>
+		  <a href="juices.html"> <button class="bg-white/10 px-5 py-2 rounded-full">Juices</button></a>
+		  <a href="icecream.html"> <button class="bg-white/10 px-5 py-2 rounded-full">IceCream</button></a>
+		</div><br><br>
+<!--===========================================================veg=============================================================-->										
+		<div class="text-center shadow-md shadow-black text-3xl font-serif bg-orange-200 p-5 w-auto mx-10 h-15 rounded-3xl">
+					VEGETERIAN
+		</div>											
+	<section class="max-w-6xl mx-auto px-4 py-10 grid md:grid-cols-3 gap-8">
+
+<!-- CARD TEMPLATE START -->
+
+<!-- Card 1 -->
+		<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787893494/edli.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3 class="font-bold">Idli</h3>
+			<span class="text-yellow-400 font-bold">₹50</span>
+
+			<button id="btn-1" onclick="addItem(1)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			  Add 🛒
+			</button>
+
+			<div id="box-1" class="hidden flex justify-between items-center mt-2">
+			  <button onclick="decrease(1)" class="bg-red-500 text-white px-3">-</button>
+			  <span id="count-1">1</span>
+			  <button onclick="increase(1)" class="bg-green-500 text-white px-3">+</button>
+			</div>
+		  </div>
+		</div>
+
+<!-- Card 2 -->
+		<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787893550/dhosa.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3 class="font-bold">Dhosa</h3>
+			<span class="text-yellow-400 font-bold">₹150</span>
+			
+			<button id="btn-2" onclick="addItem(2)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			  Add 🛒
+			</button>
+
+			<div id="box-2" class="hidden flex justify-between items-center mt-2">
+			  <button onclick="decrease(2)" class="bg-red-500 text-white px-3">-</button>
+			  <span id="count-2">1</span>
+			  <button onclick="increase(2)" class="bg-green-500 text-white px-3">+</button>
+			</div>
+		  </div>
+		</div>
+
+<!-- Card 3 -->
+		<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787893651/pongal.png" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3 class="font-bold">Pongal</h3>
+			<span class="text-yellow-400 font-bold">₹150</span>
+			
+			<button id="btn-3" onclick="addItem(3)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			  Add 🛒
+			</button>
+
+			<div id="box-3" class="hidden flex justify-between items-center mt-2">
+			  <button onclick="decrease(3)" class="bg-red-500 text-white px-3">-</button>
+			  <span id="count-3">1</span>
+			  <button onclick="increase(3)" class="bg-green-500 text-white px-3">+</button>
+			</div>
+		  </div>
+		</div>
+
+<!-- Card 4 -->
+		<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787893713/vuthappam.png" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3 class="font-bold">Vuthappam</h3>
+			<span class="text-yellow-400 font-bold">₹150</span>
+			
+			<button id="btn-4" onclick="addItem(4)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			  Add 🛒
+			</button>
+
+			<div id="box-4" class="hidden flex justify-between items-center mt-2">
+			  <button onclick="decrease(4)" class="bg-red-500 text-white px-3">-</button>
+			  <span id="count-4">1</span>
+			  <button onclick="increase(4)" class="bg-green-500 text-white px-3">+</button>
+			</div>
+		  </div>
+		</div>
+
+<!-- Card 5 -->
+		<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787893759/veg_biriyani.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3 class="font-bold">Veg Biriyani</h3>
+			<span class="text-yellow-400 font-bold">₹150</span>
+			
+			<button id="btn-5" onclick="addItem(5)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			  Add 🛒
+			</button>
+
+			<div id="box-5" class="hidden flex justify-between items-center mt-2">
+			  <button onclick="decrease(5)" class="bg-red-500 text-white px-3">-</button>
+			  <span id="count-5">1</span>
+			  <button onclick="increase(5)" class="bg-green-500 text-white px-3">+</button>
+			</div>
+		  </div>
+		</div>
+
+<!-- Card 6 -->
+		<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787893790/ghee_rice.png
+		  " class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3 class="font-bold">Ghee Rice</h3>
+			<span class="text-yellow-400 font-bold">₹150</span>
+			
+			<button id="btn-6" onclick="addItem(6)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			  Add 🛒
+			</button>
+
+			<div id="box-6" class="hidden flex justify-between items-center mt-2">
+			  <button onclick="decrease(6)" class="bg-red-500 text-white px-3">-</button>
+			  <span id="count-6">1</span>
+			  <button onclick="increase(6)" class="bg-green-500 text-white px-3">+</button>
+			</div>
+		  </div>
+		</div>
+
+<!-- Card 7 -->
+		<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787893971/burger.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3 class="font-bold">Burger</h3>
+			<span class="text-yellow-400 font-bold">₹150</span>
+			<button id="btn-7" onclick="addItem(7)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			  Add 🛒
+			</button>
+
+			<div id="box-7" class="hidden flex justify-between items-center mt-2">
+			  <button onclick="decrease(7)" class="bg-red-500 text-white px-3">-</button>
+			  <span id="count-7">1</span>
+			  <button onclick="increase(7)" class="bg-green-500 text-white px-3">+</button>
+			</div>
+		  </div>
+		</div>
+
+<!-- Card 8 -->
+		<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787894028/panner_roll.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3 class="font-bold">Paneer Roll</h3>
+			<span class="text-yellow-400 font-bold">₹150</span>
+			<button id="btn-8" onclick="addItem(8)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			  Add 🛒
+			</button>
+
+			<div id="box-8" class="hidden flex justify-between items-center mt-2">
+			  <button onclick="decrease(8)" class="bg-red-500 text-white px-3">-</button>
+			  <span id="count-8">1</span>
+			  <button onclick="increase(8)" class="bg-green-500 text-white px-3">+</button>
+			</div>
+		  </div>
+		</div>
+
+<!-- Card 9 -->
+		<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787894062/pizza.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3 class="font-bold">Pizza</h3>
+			<span class="text-yellow-400 font-bold">₹150</span>
+			<button id="btn-9" onclick="addItem(9)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			  Add 🛒
+			</button>
+
+			<div id="box-9" class="hidden flex justify-between items-center mt-2">
+			  <button onclick="decrease(9)" class="bg-red-500 text-white px-3">-</button>
+			  <span id="count-9">1</span>
+			  <button onclick="increase(9)" class="bg-green-500 text-white px-3">+</button>
+			</div>
+		  </div>
+		</div>
+
+<!-- Card 10 -->
+		<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787894101/french_fries.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3 class="font-bold">French Fries</h3>
+			<span class="text-yellow-400 font-bold">₹150</span>
+			<button id="btn-10" onclick="addItem(10)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			  Add 🛒
+			</button>
+
+			<div id="box-10" class="hidden flex justify-between items-center mt-2">
+			  <button onclick="decrease(10)" class="bg-red-500 text-white px-3">-</button>
+			  <span id="count-10">1</span>
+			  <button onclick="increase(10)" class="bg-green-500 text-white px-3">+</button>
+			</div>
+		  </div>
+		</div>
+
+<!-- Card 11 -->
+		<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787894134/veg_fried_rice.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3 class="font-bold">Veg Fried Rice</h3>
+			<span class="text-yellow-400 font-bold">₹150</span>
+			<button id="btn-11" onclick="addItem(11)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			  Add 🛒
+			</button>
+
+			<div id="box-11" class="hidden flex justify-between items-center mt-2">
+			  <button onclick="decrease(11)" class="bg-red-500 text-white px-3">-</button>
+			  <span id="count-11">1</span>
+			  <button onclick="increase(11)" class="bg-green-500 text-white px-3">+</button>
+			</div>
+			</div>
+		</div>
+
+<!-- Card 12 -->
+		<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787894179/parrota.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3 class="font-bold">Parotta</h3>
+			<span class="text-yellow-400 font-bold">₹150</span>
+			
+			<button id="btn-12" onclick="addItem(12)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			  Add 🛒
+			</button>
+
+			<div id="box-12" class="hidden flex justify-between items-center mt-2">
+			  <button onclick="decrease(12)" class="bg-red-500 text-white px-3">-</button>
+			  <span id="count-12">1</span>
+			  <button onclick="increase(12)" class="bg-green-500 text-white px-3">+</button>
+			</div>
+		  </div>
+		</div>
+	</section>
+	<script>
+			let cart = {};
+
+			function addItem(id) {
+			  cart[id] = 1;
+
+			  document.getElementById("btn-" + id).style.display = "none";
+			  document.getElementById("box-" + id).style.display = "flex";
+			}
+
+			function increase(id) {
+			  cart[id]++;
+			  document.getElementById("count-" + id).innerText = cart[id];
+			}
+
+			function decrease(id) {
+			  if (cart[id] > 1) {
+				cart[id]--;
+				document.getElementById("count-" + id).innerText = cart[id];
+			  } else {
+				cart[id] = 0;
+				document.getElementById("box-" + id).style.display = "none";
+				document.getElementById("btn-" + id).style.display = "block";
+			  }
+			}
+	</script>
+	
+<!--=============================================non veg=============================================================-->										
+		<div class="text-center shadow-md shadow-black text-3xl font-serif bg-orange-200 p-5 w-auto mx-10 h-15 rounded-3xl">
+					NON-VEGETERIAN
+		</div>											
+		<section class="max-w-6xl mx-auto px-4 py-10 grid md:grid-cols-3 gap-8">
+
+<!-- Card 1 -->
+		<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787894223/chicken_biriyani.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Chicken Biryani</h3>
+			<span class="text-yellow-400 font-bold">₹150</span>
+			
+			<button id="btn-13" onclick="addItem(13)" class="bg-yellow-400 w-full mt-2 py-2">
+			Add 🛒
+			</button>
+			
+			<div id="box-13" class="hidden flex justify-between  items-center mt-2">
+			  <button onclick="decrease(13)" class="bg-red-500 text-white px-3">-</button>
+			  <span id="count-13">1</span>
+			  <button onclick="increase(13)" class="bg-green-500 text-white px-3">+</button>
+			</div>
+		  </div>
+		</div>
+
+<!-- Card 2 -->
+		<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787894341/chicken_65_menu.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Chicken 65</h3>
+			<span class="text-yellow-400 font-bold">₹150</span>
+			
+			<button id="btn-14" onclick="addItem(14)" class="bg-yellow-400 w-full mt-2 py-2">
+			Add 🛒
+			</button>
+			
+			<div id="box-14" class="hidden flex justify-between items-center mt-2">
+			  <button onclick="decrease(14)" class="bg-red-500 text-white px-3">-</button>
+			  <span id="count-14">1</span>
+			  <button onclick="increase(14)" class="bg-green-500 text-white px-3">+</button>
+			</div>
+		  </div>
+		</div>
+
+<!-- Card 3 -->
+		<div class="bg-white rounded-2xl shadow-lg overflow-hidden">			
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787894423/mutton_rice_about.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Mutton Rice</h3>
+			<span class="text-yellow-400 font-bold">₹150</span>
+			
+			<button id="btn-15" onclick="addItem(15)" class="bg-yellow-400 w-full mt-2 py-2">
+			Add 🛒
+			</button>
+			
+			<div id="box-15" class="hidden flex justify-between items-center mt-2">
+			  <button onclick="decrease(15)" class="bg-red-500 text-white px-3">-</button>
+			  <span id="count-15">1</span>
+			  <button onclick="increase(15)" class="bg-green-500 text-white px-3">+</button>
+			</div>
+		  </div>
+		</div>
+
+<!-- Card 4 -->
+		<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787894523/mutton_pepperfey.png" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Pepper Fry</h3>
+			<span class="text-yellow-400 font-bold">₹150</span>
+			
+			<button id="btn-16" onclick="addItem(16)" class="bg-yellow-400 w-full mt-2 py-2">
+			Add 🛒
+			</button>
+			
+			<div id="box-16" class="hidden flex justify-between items-center  mt-2">
+			  <button onclick="decrease(16)" class="bg-red-500 text-white px-3">-</button>
+			  <span id="count-16">1</span>
+			  <button onclick="increase(16)" class="bg-green text-white px-3">+</button>
+			</div>
+		  </div>
+		</div>
+
+<!-- Card 5 -->
+		<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787894592/egg_freid_rice.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Egg Fried Rice</h3>
+			<span class="text-yellow-400 font-bold">₹150</span>
+
+			<button id="btn-17" onclick="addItem(17)" class="bg-yellow-400 w-full mt-2 py-2">Add 🛒</button>
+			
+			<div id="box-17" class="hidden flex justify-between items-center  mt-2">
+			  <button onclick="decrease(17)" class="bg-red-500 text-white px-3">-</button>
+			  <span id="count-17">1</span>
+			  <button onclick="increase(17)" class="bg-green-500 text-white px-3">+</button>
+			</div>
+		  </div>
+		</div>
+
+<!-- Card 6 -->
+		<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787894716/button_fried_rice.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Mutton Fried Rice</h3>
+			<span class="text-yellow-400 font-bold">₹150</span>
+			
+			<button id="btn-18" onclick="addItem(18)" class="bg-yellow-400 w-full mt-2 py-2">
+			Add 🛒
+			</button>
+			<div id="box-18" class="hidden flex justify-between items-center  mt-2">
+			  <button onclick="decrease(18)" class="bg-red-500 text-white px-3">-</button>
+			  <span id="count-18">1</span>
+			  <button onclick="increase(18)" class="bg-green-500 text-white px-3">+</button>
+			</div>
+		  </div>
+		</div>
+
+<!-- Card 7 -->
+		<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787894764/prawn_fry.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Prawn Fry</h3>
+			<span class="text-yellow-400 font-bold">₹150</span>
+			
+			<button id="btn-19" onclick="addItem(19)" class="bg-yellow-400 w-full mt-2 py-2">
+			Add 🛒
+			</button>
+			
+			<div id="box-19" class="hidden flex justify-between items-center mt-2">
+			  <button onclick="decrease(19)" class="bg-red-500 text-white px-3">-</button>
+			  <span id="count-19">1</span>
+			  <button onclick="increase(19)" class="bg-green-500 text-white px-3">+</button>
+			</div>
+		  </div>
+		</div>
+
+<!-- Card 8 -->
+		<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787894798/noodles.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Chicken Noodles</h3>
+			<span class="text-yellow-400 font-bold">₹150</span>
+			
+			<button id="btn-20" onclick="addItem(20)" class="bg-yellow-400 w-full mt-2 py-2">
+			Add 🛒
+			</button>
+			
+			<div id="box-20" class="hidden flex justify-between items-center  mt-2">
+			  <button onclick="decrease(20)" class="bg-red-500 text-white px-3">-</button>
+			  <span id="count-20">1</span>
+			  <button onclick="increase(20)" class="bg-green-500 text-white px-3">+</button>
+			</div>
+		  </div>
+		</div>
+
+<!-- Card 9 -->
+		<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787894866/fish_fry.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Fish Fry</h3>
+			<span class="text-yellow-400 font-bold">₹150</span>
+			
+			<button id="btn-21" onclick="addItem(21)" class="bg-yellow-400 w-full mt-2 py-2">
+			Add 🛒
+			</button>
+			
+			<div id="box-21" class="hidden flex justify-between items-center  mt-2">
+			  <button onclick="decrease(21)" class="bg-red-500 text-white px-3">-</button>
+			  <span id="count-21">1</span>
+			  <button onclick="increase(21)" class="bg-green-500 text-white px-3">+</button>
+			</div>
+		  </div>
+		</div>
+	</section>
+<script>
+			let cart = {};
+
+			function addItem(id) {
+			  cart[id] = 1;
+
+			  document.getElementById("btn-" + id).style.display = "none";
+			  document.getElementById("box-" + id).style.display = "flex";
+			}
+
+			function increase(id) {
+			  cart[id]++;
+			  document.getElementById("count-" + id).innerText = cart[id];
+			}
+
+			function decrease(id) {
+			  if (cart[id] > 1) {
+				cart[id]--;
+				document.getElementById("count-" + id).innerText = cart[id];
+			  } else {
+				cart[id] = 0;
+				document.getElementById("box-" + id).style.display = "none";
+				document.getElementById("btn-" + id).style.display = "block";
+			  }
+			}
+	</script>
+		
+<!---------------------------------------------------------veg starters--------------------------------------------------------------->
+
+	<div class="text-center shadow-md shadow-black text-3xl font-serif bg-orange-200 p-5 w-auto mx-10 h-15 rounded-3xl">			
+					VEG STARTERS
+	</div>											
+	<section class="max-w-6xl mx-auto px-4 py-10 grid md:grid-cols-3 gap-8">
+
+	<!-- Card 1 -->
+			<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+			  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787894961/paneer_tikka_c.jpg" class="w-full h-48 object-cover">
+			  <div class="p-4">
+				<h3>Paneer Tikka</h3>
+				<span class="text-yellow-400 font-bold">₹150</span>
+
+				<button id="btn-22" onclick="addItem(22)" class="bg-yellow-400 w-full mt-2 py-2">
+				Add 🛒
+				</button>
+
+				<div id="box-22" class="hidden flex justify-between mt-2">
+				  <button onclick="decrease(22)" class="bg-red-500 text-white px-3">-</button>
+				  <span id="count-22">1</span>
+				  <button onclick="increase(22)" class="bg-green-500 text-white px-3">+</button>
+				</div>
+			  </div>
+			</div>
+
+	<!-- Card 2 -->
+			<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+			  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787895003/onion_pakkoda.jpg" class="w-full h-48 object-cover">
+			  <div class="p-4">
+				<h3>Onion Pakoda</h3>
+				<span class="text-yellow-400 font-bold">₹60</span>
+
+				<button id="btn-23" onclick="addItem(23)" class="bg-yellow-400 w-full mt-2 py-2">Add 🛒</button>
+
+				<div id="box-23" class="hidden flex justify-between mt-2">
+				  <button onclick="decrease(23)" class="bg-red-500 text-white px-3">-</button>
+				  <span id="count-23">1</span>
+				  <button onclick="increase(23)" class="bg-green-500 text-white px-3">+</button>
+				</div>
+			  </div>
+			</div>
+
+	<!-- Card 3 -->
+			<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+			  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787895057/gobi_65.jpg" class="w-full h-48 object-cover">
+			  <div class="p-4">
+				<h3>Gobi 65</h3>
+				<span class="text-yellow-400 font-bold">₹100</span>
+
+				<button id="btn-24" onclick="addItem(24)" class="bg-yellow-400 w-full mt-2 py-2">Add 🛒</button>
+
+				<div id="box-24" class="hidden flex justify-between mt-2">
+				  <button onclick="decrease(24)" class="bg-red-500 text-white px-3">-</button>
+				  <span id="count-24">1</span>
+				  <button onclick="increase(24)" class="bg-green-500 text-white px-3">+</button>
+				</div>
+			  </div>
+			</div>
+
+	<!-- Card 4 -->
+			<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+			  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787895116/vegspringroll.jpg" class="w-full h-48 object-cover">
+			  <div class="p-4">
+				<h3>Veg Spring Roll</h3>
+				<span class="text-yellow-400 font-bold">₹150</span>
+
+				<button id="btn-25" onclick="addItem(25)" class="bg-yellow-400 w-full mt-2 py-2">Add 🛒</button>
+
+				<div id="box-25" class="hidden flex justify-between mt-2">
+				  <button onclick="decrease(25)"class="bg-red-500 text-white px-3">-</button>
+				  <span id="count-25">1</span>
+				  <button onclick="increase(25)" class="bg-green-500 text-white px-3">+</button>
+				</div>
+			  </div>
+			</div>
+
+	<!-- Card 5 -->
+			<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+			  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787895195/veg_pakora.jpg" class="w-full h-48 object-cover">
+			  <div class="p-4">
+				<h3>Veg Pakora</h3>
+				<span class="text-yellow-400 font-bold">₹50</span>
+
+				<button id="btn-26" onclick="addItem(26)" class="bg-yellow-400 w-full mt-2 py-2">Add 🛒</button>
+
+				<div id="box-26" class="hidden flex justify-between mt-2">
+				  <button onclick="decrease(26)" class="bg-red-500 text-white px-3">-</button>
+				  <span id="count-26">1</span>
+				  <button onclick="increase(26)" class="bg-green-500 text-white px-3">+</button>
+				</div>
+			  </div>
+			</div>
+
+	<!-- Card 6 -->
+			<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+			  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787895336/veg_catlet.jpg" class="w-full h-48 object-cover">
+			  <div class="p-4">
+				<h3>Veg Cutlet</h3>
+				<span class="text-yellow-400 font-bold">₹150</span>
+
+				<button id="btn-27" onclick="addItem(27)" class="bg-yellow-400 w-full mt-2 py-2">Add 🛒</button>
+
+				<div id="box-27" class="hidden flex justify-between mt-2">
+				  <button onclick="decrease(27)"class="bg-red-500 text-white px-3">-</button>
+				  <span id="count-27">1</span>
+				  <button onclick="increase(27)" class="bg-green-500 text-white px-3">+</button>
+				</div>
+			  </div>
+			</div>
+
+	<!-- Card 7 -->
+			<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+			  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787895461/mushroom_pepper_fry.jpg" class="w-full h-48 object-cover">
+			  <div class="p-4">
+				<h3>Mushroom Pepper Fry</h3>
+				<span>₹200</span>
+
+				<button id="btn-28" onclick="addItem(28)" class="bg-yellow-400 w-full mt-2 py-2">Add 🛒</button>
+
+				<div id="box-28" class="hidden flex justify-between mt-2">
+				  <button onclick="decrease(28)"class="bg-red-500 text-white px-3">-</button>
+				  <span id="count-28">1</span>
+				  <button onclick="increase(28)" class="bg-green-500 text-white px-3">+</button>
+				</div>
+			  </div>
+			</div>
+
+	<!-- Card 8 -->
+			<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+			  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787895501/baby_corn.jpg" class="w-full h-48 object-cover">
+			  <div class="p-4">
+				<h3>Crispy Corn</h3>
+				<span class="text-yellow-400 font-bold">₹100</span>
+
+				<button id="btn-29" onclick="addItem(29)" class="bg-yellow-400 w-full mt-2 py-2">Add 🛒</button>
+
+				<div id="box-29" class="hidden flex justify-between mt-2">
+				  <button onclick="decrease(29)" class="bg-red-500 text-white px-3">-</button>
+				  <span id="count-29">1</span>
+				  <button onclick="increase(29)"class="bg-green-500 text-white px-3">+</button>
+				</div>
+			  </div>
+			</div>
+
+	<!-- Card 9 -->
+			<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+			  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787895567/aloo_tikka.jpg" class="w-full h-48 object-cover">
+			  <div class="p-4">
+				<h3>Aloo Tikka</h3>
+				<span class="text-yellow-400 font-bold">₹200</span>
+
+				<button id="btn-30" onclick="addItem(30)" class="bg-yellow-400 w-full mt-2 py-2">Add 🛒</button>
+
+				<div id="box-30" class="hidden flex justify-between mt-2">
+				  <button onclick="decrease(30)"class="bg-red-500 text-white px-3">-</button>
+				  <span id="count-30">1</span>
+				  <button onclick="increase(30)"class="bg-green-500 text-white px-3">+</button>
+				</div>
+			  </div>
+			</div>
+			</section>
+<script>
+let cart = {};
+
+function addItem(id) {
+  cart[id] = 1;
+  document.getElementById("btn-" + id).style.display = "none";
+  document.getElementById("box-" + id).style.display = "flex";
+}
+
+function increase(id) {
+  cart[id]++;
+  document.getElementById("count-" + id).innerText = cart[id];
+}
+
+function decrease(id) {
+  if (cart[id] > 1) {
+    cart[id]--;
+    document.getElementById("count-" + id).innerText = cart[id];
+  } else {
+    cart[id] = 0;
+    document.getElementById("box-" + id).style.display = "none";
+    document.getElementById("btn-" + id).style.display = "block";
+  }
+}
+</script>
+		
+		
+<!--------------------------nonveg starters------------------------------------------------------------------------>		
+		
+
+
+			<div class="text-center shadow-md shadow-black text-3xl font-serif bg-orange-200 p-5 w-auto mx-10 h-15 rounded-3xl">
+					NON  VEG STARTERS
+		</div>
+		<section class="max-w-6xl mx-auto px-4 py-10 grid md:grid-cols-3 gap-8">
+
+<!-- CARD 1 -->
+		<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787895613/chicken_lollipap.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Chicken Lollipop</h3>
+			<p class="text-yellow-400 font-bold">₹200</p>
+
+			<button id="btn-31" onclick="addItem(31)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+				  Add 🛒
+			</button>
+
+			<div id="box-31" class="hidden flex justify-between items-center mt-2">
+				<button onclick="decrease(31)" class="bg-red-500 text-white px-3">-</button>
+				<span id="count-31">1</span>
+				<button onclick="increase(31)" class="bg-green-500 text-white px-3">+</button>
+			</div>
+			</div>
+		</div>
+
+<!-- CARD 2 -->
+		<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+			<img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787894866/fish_fry.jpg" class="w-full h-48 object-cover">
+			<div class="p-4">
+			<h3>Fish Fry</h3>
+			<p class="text-yellow-400 font-bold">₹150</p>
+			
+			<button id="btn-32" onclick="addItem(32)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+				 Add 🛒
+			</button>
+
+			<div id="box-32" class="hidden flex justify-between items-center mt-2">
+				<button onclick="decrease(32)" class="bg-red-500 text-white px-3">-</button>
+					<span id="count-32">1</span>
+				<button onclick="increase(32)" class="bg-green-500 text-white px-3">+</button>
+			</div>		
+			</div>
+		</div>
+
+<!-- CARD 3 -->
+		<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+			<img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787894764/prawn_fry.jpg" class="w-full h-48 object-cover">
+			<div class="p-4">
+			<h3>Prawn Fry</h3>
+			<p class="text-yellow-400 font-bold">₹230</p>
+
+			<button id="btn-33" onclick="addItem(33)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+				Add 🛒
+			</button>
+
+			<div id="box-33" class="hidden flex justify-between items-center mt-2">
+				<button onclick="decrease(33)" class="bg-red-500 text-white px-3">-</button>
+				  <span id="count-33">1</span>
+				<button onclick="increase(33)" class="bg-green-500 text-white px-3">+</button>
+			</div>	
+			</div>
+		</div>
+
+<!-- CARD 4 -->
+		<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787895737/chicken_swings.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+		  <h3>Chicken Wings</h3>
+		  <p class="text-yellow-400 font-bold">₹250</p>
+
+			<button id="btn-34" onclick="addItem(34)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+				Add 🛒
+			</button>
+
+			<div id="box-34" class="hidden flex justify-between items-center mt-2">
+				<button onclick="decrease(34)" class="bg-red-500 text-white px-3">-</button>
+				  <span id="count-34">1</span>
+				<button onclick="increase(34)" class="bg-green-500 text-white px-3">+</button>
+			</div>
+			</div>
+		</div>
+
+<!-- CARD 5 -->
+		<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787894341/chicken_65_menu.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+		  <h3>Chicken 65</h3>
+		  <p class="text-yellow-400 font-bold">₹100</p>
+
+			<button id="btn-35" onclick="addItem(35)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+				  Add 🛒
+			</button>
+
+			<div id="box-35" class="hidden flex justify-between items-center mt-2">
+				<button onclick="decrease(35)" class="bg-red-500 text-white px-3">-</button>
+				  <span id="count-35">1</span>
+				<button onclick="increase(35)" class="bg-green-500 text-white px-3">+</button>
+			</div>
+			</div>
+		</div>
+
+<!-- CARD 6 -->
+		<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787895816/chicken_popcorn.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+		  <h3>Chicken Popcorn</h3>
+		  <p class="text-yellow-400 font-bold">₹80</p>
+
+			<button id="btn-36" onclick="addItem(36)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+				  Add 🛒
+			</button>
+
+			<div id="box-36" class="hidden flex justify-between items-center mt-2">
+				<button onclick="decrease(36)" class="bg-red-500 text-white px-3">-</button>
+					<span id="count-36">1</span>
+				<button onclick="increase(36)" class="bg-green-500 text-white px-3">+</button>
+			</div>
+			</div>
+		</div>
+
+<!-- CARD 7 -->
+		<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787895953/chicken_nuggets.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+		  <h3>Chicken Nuggets</h3>
+		  <p class="text-yellow-400 font-bold">₹200</p>
+
+			<button id="btn-37" onclick="addItem(37)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+				  Add 🛒
+			</button>
+
+			<div id="box-37" class="hidden flex justify-between items-center mt-2">
+				 <button onclick="decrease(37)" class="bg-red-500 text-white px-3">-</button>
+					<span id="count-37">1</span>
+				  <button onclick="increase(37)" class="bg-green-500 text-white px-3">+</button>
+			</div>
+			</div>
+		</div>
+
+<!-- CARD 8 -->
+		<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787895990/Seekh_Kebab.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+		  <h3>Seekh Kebab</h3>
+		  <p class="text-yellow-400 font-bold">₹180</p>
+
+			<button id="btn-38" onclick="addItem(38)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+				  Add 🛒
+			</button>
+
+				<div id="box-38" class="hidden flex justify-between items-center mt-2">
+				  <button onclick="decrease(38)" class="bg-red-500 text-white px-3">-</button>
+				  <span id="count-38">1</span>
+				  <button onclick="increase(38)" class="bg-green-500 text-white px-3">+</button>
+				</div>
+			</div>	
+		</div>
+
+<!-- CARD 9 -->
+		<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+			<img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787896251/fish_finger.jpg" class="w-full h-48 object-cover">
+			<div class="p-4">
+			<h3>Fish Finger</h3>
+			<p class="text-yellow-400 font-bold">₹150</p>
+
+				<button id="btn-39" onclick="addItem(39)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+					Add 🛒
+				</button>
+
+			<div id="box-39" class="hidden flex justify-between items-center mt-2">
+				<button onclick="decrease(39)" class="bg-red-500 text-white px-3">-</button>
+					<span id="count-39">1</span>
+				<button onclick="increase(39)" class="bg-green-500 text-white px-3">+</button>
+			</div>
+			</div>
+		</div>
+	</section>
+
+<script>
+let cart = {};
+
+function addItem(id) {
+  cart[id] = 1;
+  document.getElementById("btn-" + id).style.display = "none";
+  document.getElementById("box-" + id).style.display = "flex";
+}
+
+function increase(id) {
+  cart[id]++;
+  document.getElementById("count-" + id).innerText = cart[id];
+}
+
+function decrease(id) {
+  if (cart[id] > 1) {
+    cart[id]--;
+    document.getElementById("count-" + id).innerText = cart[id];
+  } else {
+    cart[id] = 0;
+    document.getElementById("box-" + id).style.display = "none";
+    document.getElementById("btn-" + id).style.display = "block";
+  }
+}
+</script>
+
+</body>
+</html>
+		
+<!---------------------------veg sups------------------------------------------------------------------------->		
+
+
+		<div class="text-center shadow-md shadow-black text-3xl font-serif bg-orange-200 p-5 w-auto mx-10 h-15 rounded-3xl">
+					VEG SOUPS
+		</div>											
+		
+<!-- Menu Grid -->
+		<section class="max-w-6xl mx-auto px-4 py-10 grid md:grid-cols-3 gap-8">
+
+<!-- CARD 1 -->
+		<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787896290/tomato_soup.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Tomato Soup</h3>
+			<p class="text-yellow-400 font-bold">₹150</p>
+
+			<button id="btn-40" onclick="addItem(40)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+					Add 🛒
+			</button>
+
+			<div id="box-40" class="hidden flex justify-between items-center mt-2">
+			  <button onclick="decrease(40)" class="bg-red-500 text-white  px-2">-</button>
+			  <span id="count-40">1</span>
+			  <button onclick="increase(40)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>
+
+<!-- CARD 2 -->
+		<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787896324/vegtable_soup.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Vegetable Soup</h3>
+			<p class="text-yellow-400 font-bold">₹100</p>
+
+			<button id="btn-41" onclick="addItem(41)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+
+			<div id="box-41" class="hidden flex gap-2 justify-between items-center  mt-2">
+			  <button onclick="decrease(41)" class="bg-red-500 text-white  px-2">-</button>
+			  <span id="count-41">1</span> 
+			  <button onclick="increase(41)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>
+
+<!-- CARD 3 -->
+		<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787896362/mushroom_soup.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Mushroom Soup</h3>
+			<p class="text-yellow-400 font-bold">₹130</p>
+
+			<button id="btn-42" onclick="addItem(42)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+
+			<div id="box-42" class="hidden flex justify-between gap-2 mt-2 items-center">
+			  <button onclick="decrease(42)" class="bg-red-500 text-white px-2">-</button>
+			  <span id="count-42">1</span>
+			  <button onclick="increase(42)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>
+
+<!-- CARD 4 -->
+		<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+			<img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787896394/Hot_sour_soup.jpg" class="w-full h-48 object-cover">
+			 <div class="p-4">
+				<h3>Hot & Sour Soup</h3>
+				<p class="text-yellow-400 font-bold">₹150</p>
+
+				<button id="btn-43" onclick="addItem(43)" class="bg-yellow-400 w-full mt-2 py-2 rounded">Add 🛒</button>
+
+				<div id="box-43" class="hidden flex justify-between  gap-2 items-center mt-2">
+				  <button onclick="decrease(43)" class="bg-red-500 text-white px-2">-</button>
+				  <span id="count-43">1</span>
+				  <button onclick="increase(43)" class="bg-green-500 text-white px-2">+</button>
+				</div>
+			 </div>
+		</div>
+
+<!-- CARD 5 -->
+		<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+		<img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787896420/sweet_corn_soup.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Sweet Corn Soup</h3>
+			<p class="text-yellow-400 font-bold">₹100</p>
+
+			<button id="btn-44" onclick="addItem(44)" class="bg-yellow-400 w-full mt-2 py-2 rounded">Add 🛒</button>
+
+			<div id="box-44" class="hidden flex justify-between gap-2 items-center mt-2">
+			  <button onclick="decrease(44)" class="bg-red-500 text-white px-2">-</button>
+			  <span id="count-44">1</span>
+			  <button onclick="increase(44)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>
+
+<!-- CARD 6 -->
+		<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787896504/spinanch_soup.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Spinach Soup</h3>
+			<p class="text-yellow-400 font-bold">₹150</p>
+
+			<button id="btn-45" onclick="addItem(45)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+
+			<div id="box-45" class="hidden flex justify-between gap-2 items-center mt-2">
+			  <button onclick="decrease(45)" class="bg-red-500 text-white px-2">-</button>
+			  <span id="count-45">1</span>
+			  <button onclick="increase(45)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>
+
+<!-- CARD 7 -->
+		<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787896545/mixed_veg_soup.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Mixed Veg Soup</h3>
+			<p class="text-yellow-400 font-bold">₹200</p>
+
+			<button id="btn-46" onclick="addItem(46)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+
+			<div id="box-46" class="hidden flex justify-between gap-2 items-center  mt-2">
+			  <button onclick="decrease(46)" class="bg-red-500 text-white  px-2">-</button>
+			  <span id="count-46">1</span>
+			  <button onclick="increase(46)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>
+
+<!-- CARD 8 -->
+		<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787896613/Garlic_soup.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Garlic Soup</h3>
+			<p class="text-yellow-400 font-bold">₹90</p>
+
+			<button id="btn-47" onclick="addItem(47)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+
+			<div id="box-47" class="hidden flex  justify-between gap-2 items-center mt-2">
+			  <button onclick="decrease(47)" class="bg-red-500 text-white px-2">-</button>
+			  <span id="count-47">1</span>
+			  <button onclick="increase(47)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>
+
+<!-- CARD 9 -->
+		<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787896640/cream_of_veg_soup.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Cream Veg Soup</h3>
+			<p class="text-yellow-400 font-bold">₹200</p>
+
+			<button id="btn-48" onclick="addItem(48)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+
+			<div id="box-48" class="hidden flex justify-between gap-2 items-center mt-2">
+			  <button onclick="decrease(48)" class="bg-red-500 text-white px-2">-</button>
+			  <span id="count-48">1</span>
+			  <button onclick="increase(48)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>
+
+</section>
+
+<script>
+let cart = {};
+
+function addItem(id) {
+  cart[id] = 1;
+  document.getElementById("btn-" + id).style.display = "none";
+  document.getElementById("box-" + id).style.display = "flex";
+}
+
+function increase(id) {
+  cart[id]++;
+  document.getElementById("count-" + id).innerText = cart[id];
+}
+
+function decrease(id) {
+  if (cart[id] > 1) {
+    cart[id]--;
+    document.getElementById("count-" + id).innerText = cart[id];
+  } else {
+    cart[id] = 0;
+    document.getElementById("box-" + id).style.display = "none";
+    document.getElementById("btn-" + id).style.display = "block";
+  }
+}
+</script>
+		
+<!---------------------------------Nonveg soup---------------------------------------------------------------->
+		<div class="text-center shadow-md shadow-black text-3xl font-serif bg-orange-200 p-5 w-auto mx-10 h-15 rounded-3xl">
+					NON  VEG SOUPS
+		</div>											
+		
+<!-- Menu Grid -->
+	<section class="max-w-6xl mx-auto px-4 py-10 grid md:grid-cols-3 gap-8">
+
+<!-- CARD 1 -->
+		<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787896682/mutton_soup.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Mutton Soup</h3>
+			<p class="text-yellow-400 font-bold">₹200</p>
+
+			<button id="btn-49" onclick="addItem(49)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+
+			<div id="box-49" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(49)" class="bg-red-500 text-white px-2">-</button>
+			  <span id="count-49">1</span>
+			  <button onclick="increase(49)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>
+
+<!-- CARD 2 -->
+		<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787896782/chicken_soup.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Chicken Soup</h3>
+			<p class="text-yellow-400 font-bold">₹150</p>
+
+			<button id="btn-50" onclick="addItem(50)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+
+			<div id="box-50" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(50)" class="bg-red-500 text-white px-2">-</button>
+			  <span id="count-50">1</span>
+			  <button onclick="increase(50)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>
+
+<!-- CARD 3 -->
+		<div class="bg-white rounded-2xl shadow-lg overflow-hidden">	
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787896850/mutton_peper_soup.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Mutton Pepper Soup</h3>
+			<p class="text-yellow-400 font-bold">₹200</p>
+
+			<button id="btn-51" onclick="addItem(51)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+
+			<div id="box-51" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(51)" class="bg-red-500 text-white px-2">-</button>
+			  <span id="count-51">1</span>
+			  <button onclick="increase(51)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>
+
+<!-- CARD 4 -->
+		<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787896884/chicken_peppar_soup.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Chicken Pepper Soup</h3>
+			<p class="text-yellow-400 font-bold">₹250</p>
+
+			<button id="btn-52" onclick="addItem(52)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+
+			<div id="box-52" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(52)" class="bg-red-500 text-white px-2">-</button>
+			  <span id="count-52">1</span>
+			  <button onclick="increase(52)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>
+
+<!-- CARD 5 -->
+		<div class="bg-white rounded-2xl shadow-lg overflow-hidden">		  
+		<img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787896955/chicken_swetcorn_soup.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Chicken SweetCorn Soup</h3>
+			<p class="text-yellow-400 font-bold">₹100</p>
+
+			<button id="btn-53" onclick="addItem(53)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+
+			<div id="box-53" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(53)" class="bg-red-500 text-white px-2">-</button>
+			  <span id="count-53">1</span>
+			  <button onclick="increase(53)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>
+
+<!-- CARD 6 -->
+		<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787897031/chicken_manchaw.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Chicken Manchow Soup</h3>
+			<p class="text-yellow-400 font-bold">₹180</p>
+
+			<button id="btn-54" onclick="addItem(54)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+
+			<div id="box-54" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(54)" class="bg-red-500 text-white px-2">-</button>
+			  <span id="count-54">1</span>
+			  <button onclick="increase(54)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>
+
+<!-- CARD 7 -->
+		<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787897077/prawn_soup.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Prawn Soup</h3>
+			<p class="text-yellow-400 font-bold">₹200</p>
+
+			<button id="btn-55" onclick="addItem(55)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+
+			<div id="box-55" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(55)" class="bg-red-500 text-white px-2">-</button>
+			  <span id="count-55">1</span>
+			  <button onclick="increase(55)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>
+
+<!-- CARD 8 -->
+		<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787897149/chicken_cream_soup.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Chicken Cream Soup</h3>
+			<p class="text-yellow-400 font-bold">₹180</p>
+
+			<button id="btn-56" onclick="addItem(56)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+
+			<div id="box-56" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(56)" class="bg-red-500 text-white px-2">-</button>
+			  <span id="count-56">1</span>
+			  <button onclick="increase(56)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>
+
+</section>
+
+<script>
+let cart = {};
+
+function addItem(id) {
+  cart[id] = 1;
+  document.getElementById("btn-" + id).style.display = "none";
+  document.getElementById("box-" + id).style.display = "flex";
+}
+
+function increase(id) {
+  cart[id]++;
+  document.getElementById("count-" + id).innerText = cart[id];
+}
+
+function decrease(id) {
+  if (cart[id] > 1) {
+    cart[id]--;
+    document.getElementById("count-" + id).innerText = cart[id];
+  } else {
+    cart[id] = 0;
+    document.getElementById("box-" + id).style.display = "none";
+    document.getElementById("btn-" + id).style.display = "block";
+  }
+}
+</script>
+		
+<!---------------------------Desert indian sweet------------------------------------>		
+		
+		<div class="text-center shadow-md shadow-black text-3xl font-serif bg-orange-200 p-5 w-auto mx-10 h-15 rounded-3xl">
+				DESERTS INDIAN SWEETS
+		</div>										
+		
+<!-- Menu Grid -->
+		<section class="max-w-6xl mx-auto px-4 py-10 grid md:grid-cols-3 gap-8">
+
+<!-- CARD 1 -->
+		<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787897205/jamun.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Gulab Jamun</h3>
+			<p class="text-yellow-400 font-bold">₹100</p>
+
+			<button id="btn-57" onclick="addItem(57)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+			
+			<div id="box-57" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(57)" class="bg-red-500 text-white px-2">-</button>
+			  <span id="count-57">1</span>
+			  <button onclick="increase(57)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>
+
+<!-- CARD 2 -->
+		<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787897232/rasamalai.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Rasamalai</h3>
+			<p class="text-yellow-400 font-bold">₹150</p>
+
+			<button id="btn-58" onclick="addItem(58)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+			
+			<div id="box-58" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(58)" class="bg-red-500 text-white px-2">-</button>
+			  <span id="count-58">1</span>
+			  <button onclick="increase(58)" class="bg-green-500 text-white  px-2">+</button>
+			</div>
+		  </div>
+		</div>
+
+<!-- CARD 3 -->
+		<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787897264/maisur_pak.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Mysore Pak</h3>
+			<p class="text-yellow-400 font-bold">₹180</p>
+
+			<button id="btn-59" onclick="addItem(59)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+			
+			<div id="box-59" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(59)" class="bg-red-500 text-white  px-2">-</button>
+			  <span id="count-59">1</span>
+			  <button onclick="increase(59)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>
+
+<!-- CARD 4 -->
+		<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787897304/rasakulla.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Rasagulla</h3>
+			<p class="text-yellow-400 font-bold">₹250</p>
+
+			<button id="btn-60" onclick="addItem(60)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+			
+			<div id="box-60" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(60)" class="bg-red-500 text-white px-2">-</button>
+			  <span id="count-60">1</span>
+			  <button onclick="increase(60)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>
+
+<!-- CARD 5 -->
+		<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787897329/laddu.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Laddu</h3>
+			<pclass="text-yellow-400 font-bold">₹100</p>
+
+			<button id="btn-61" onclick="addItem(61)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+			
+			<div id="box-61" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(61)" class="bg-red-500 text-white  px-2">-</button>
+			  <span id="count-61">1</span>
+			  <button onclick="increase(61)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>
+
+<!-- CARD 6 -->
+		<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787897360/jelebi.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Jalebi</h3>
+			<p class="text-yellow-400 font-bold">₹180</p>
+
+			<button id="btn-62" onclick="addItem(62)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+			
+			<div id="box-62" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(62)" class="bg-red-500 text-white px-2">-</button>
+			  <span id="count-62">1</span>
+			  <button onclick="increase(62)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>
+
+<!-- CARD 7 -->
+		<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787897386/badham_halwa.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Badam Halwa</h3>
+			<p class="text-yellow-400 font-bold">₹200</p>
+
+			<button id="btn-63" onclick="addItem(63)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+			
+			<div id="box-63" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(63)" class="bg-red-500 text-white px-2">-</button>
+			  <span id="count-63">1</span>
+			  <button onclick="increase(63)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>
+
+<!-- CARD 8 -->
+		<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787897416/soan_papdi.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Soan Papdi</h3>
+			<p class="text-yellow-400 font-bold">₹180</p>
+
+			<button id="btn-64" onclick="addItem(64)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+			
+			<div id="box-64" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(64)" class="bg-red-500 text-white px-2">-</button>
+			  <span id="count-64">1</span>
+			  <button onclick="increase(64)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>
+
+<!-- CARD 9 -->
+		<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787897453/kaju_kalti.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Kaju Katli</h3>
+			<p class="text-yellow-400 font-bold">₹180</p>
+
+			<button id="btn-65" onclick="addItem(65)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+			
+			<div id="box-65" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(65)" class="bg-red-500 text-white px-2">-</button>
+			  <span id="count-65">1</span>
+			  <button onclick="increase(65)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>
+
+</section>
+
+<script>
+let cart = {};
+
+function addItem(id) {
+  cart[id] = 1;
+  document.getElementById("btn-" + id).style.display = "none";
+  document.getElementById("box-" + id).style.display = "flex";
+}
+
+function increase(id) {
+  cart[id]++;
+  document.getElementById("count-" + id).innerText = cart[id];
+}
+
+function decrease(id) {
+  if (cart[id] > 1) {
+    cart[id]--;
+    document.getElementById("count-" + id).innerText = cart[id];
+  } else {
+    cart[id] = 0;
+    document.getElementById("box-" + id).style.display = "none";
+    document.getElementById("btn-" + id).style.display = "block";
+  }
+}
+</script>
+<!-----------------------cake and desert------------------------------------------->
+
+		<div class="text-center shadow-md shadow-black text-3xl font-serif bg-orange-200 p-5 w-auto mx-10 h-15 rounded-3xl">
+				CAKE AND SPECIAL DESERTS 
+		</div>											
+		
+<!-- Menu Grid -->
+		<section class="max-w-6xl mx-auto px-4 py-10 grid md:grid-cols-3 gap-8">
+<!--Card 1 -->
+		<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787897487/brownie.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Browni</h3>
+			<p class="text-yellow-400 font-bold">₹100</p>
+
+			<button id="btn-66" onclick="addItem(66)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+			
+			<div id="box-66" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(66)" class="bg-red-500 text-white px-2">-</button>
+			  <span id="count-66">1</span>
+			  <button onclick="increase(66)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>		
+<!-- Card 2 -->
+		<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787897517/waffle_c.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Waffle</h3>
+			<p class="text-yellow-400 font-bold">₹150</p>
+
+			<button id="btn-67" onclick="addItem(67)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+			
+			<div id="box-67" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(67)" class="bg-red-500 text-white px-2">-</button>
+			  <span id="count-67">1</span>
+			  <button onclick="increase(67)" class="bg-green-500  text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>
+				
+<!-- Card 3 -->
+		<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787897557/black_forest.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>BlackForest</h3>
+			<p class="text-yellow-400 font-bold">₹180</p>
+
+			<button id="btn-68" onclick="addItem(68)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+			
+			<div id="box-68" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(68)" class="bg-red-500 text-white px-2">-</button>
+			  <span id="count-68">1</span>
+			  <button onclick="increase(68)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>
+				
+<!-- Card 4 -->
+		<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787897590/chocolate_cake.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Chicolate Cake</h3>
+			<p class="text-yellow-400 font-bold">₹250</p>
+
+			<button id="btn-69" onclick="addItem(69)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+			
+			<div id="box-69" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(69)" class="bg-red-500 text-white px-2">-</button>
+			  <span id="count-69">1</span>
+			  <button onclick="increase(69)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>
+					
+<!-- Card 5 -->
+		<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787897671/red_velvet_cake.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Redvelvet Cake</h3>
+			<p class="text-yellow-400 font-bold">₹200</p>
+
+			<button id="btn-70" onclick="addItem(70)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+			
+			<div id="box-70" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(70)" class="bg-red-500  text-white px-2">-</button>
+			  <span id="count-70">1</span>
+			  <button onclick="increase(70)" class="bg-green-500 text-white  px-2">+</button>
+			</div>
+		  </div>
+		</div>
+						
+<!--Card 6 -->
+		<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787897879/butterscotch_cake.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Buttercatch Cake</h3>
+			<p class="text-yellow-400 font-bold">₹250</p>
+
+			<button id="btn-71" onclick="addItem(71)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+			
+			<div id="box-71" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(71)" class="bg-red-500 text-white px-2">-</button>
+			  <span id="count-71">1</span>
+			  <button onclick="increase(71)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>			
+			
+<!-- Card 7 -->
+		<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787897904/kulfi.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Kulfi</h3>
+			<p class="text-yellow-400 font-bold">₹80</p>
+
+			<button id="btn-72" onclick="addItem(72)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+			
+			<div id="box-72" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(72)" class="bg-red-500 text-white px-2">-</button>
+			  <span id="count-72">1</span>
+			  <button onclick="increase(72)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>
+				
+<!--Card 8 -->
+		<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787897972/straberry_cake.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Straberry Cake</h3>
+			<p class="text-yellow-400 font-bold">₹180</p>
+
+			<button id="btn-73" onclick="addItem(73)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+			
+			<div id="box-73" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(73)" class="bg-red-500 text-white px-2">-</button>
+			  <span id="count-73">1</span>
+			  <button onclick="increase(73)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>
+			
+<!-- Card 9-->
+		<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787898005/cheese_cake.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Cheese Cake</h3>
+			<p class="text-yellow-400 font-bold">₹200</p>
+
+			<button id="btn-74" onclick="addItem(74)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+			
+			<div id="box-74" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(74)" class="bg-red-500 text-white px-2">-</button>
+			  <span id="count-74">1</span>
+			  <button onclick="increase(74)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>
+</section>
+<script>
+			let cart = {};
+
+					function addItem(id) {
+					  cart[id] = 1;
+
+					  document.getElementById("btn-" + id).style.display = "none";
+					  document.getElementById("box-" + id).style.display = "flex";
+					}
+
+					function increase(id) {
+					  cart[id]++;
+					  document.getElementById("count-" + id).innerText = cart[id];
+					}
+
+					function decrease(id) {
+					  if (cart[id] > 1) {
+						cart[id]--;
+						document.getElementById("count-" + id).innerText = cart[id];
+					  } else {
+						cart[id] = 0;
+						document.getElementById("box-" + id).style.display = "none";
+						document.getElementById("btn-" + id).style.display = "block";
+					  }
+					}
+</script>
+			
+
+<!---------------Special desert drings---------------------------------------------->		
+				
+				
+		<div class="text-center shadow-md shadow-black text-3xl font-serif bg-orange-200 p-5 w-auto mx-10 h-15 rounded-3xl">
+						 SPECIAL DESERTS DRINGS
+		</div>										
+				
+<!-- Menu Grid -->
+		<section class="max-w-6xl mx-auto px-4 py-10 grid md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+		<div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787898033/falooda.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Falooda</h3>
+			<p class="text-yellow-400 font-bold">₹100</p>
+
+			<button id="btn-75" onclick="addItem(75)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+			
+			<div id="box-75" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(75)" class="bg-red-500 text-white px-2">-</button>
+			  <span id="count-75">1</span>
+			  <button onclick="increase(75)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>
+				
+<!-- Card 2 -->
+		<div class="bg-white/10 rounded-2xl overflow-hidden shadow-lg">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787898093/chacolate_milkshake.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Chocolate Milkshake</h3>
+			<p class="text-yellow-400 font-bold">₹150</p>
+
+			<button id="btn-76" onclick="addItem(76)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+			
+			<div id="box-76" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(76)" class="bg-red-500 text-white px-2">-</button>
+			  <span id="count-76">1</span>
+			  <button onclick="increase(76)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>
+				
+<!--Card 3 -->
+		<div class="bg-white/10 rounded-2xl overflow-hidden shadow-lg">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787898093/chacolate_milkshake.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Chocolate Milkshake</h3>
+			<p class="text-yellow-400 font-bold">₹180</p>
+
+			<button id="btn-77" onclick="addItem(77)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+			
+			<div id="box-77" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(77)" class="bg-red-500 text-white px-2">-</button>
+			  <span id="count-77">1</span>
+			  <button onclick="increase(77)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>
+				
+<!-- Card 4 -->
+		<div class="bg-white/10  rounded-2xl overflow-hidden shadow-lg">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787898160/Mango_shake.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Mango Shake</h3>
+			<p class="text-yellow-400 font-bold">₹120</p>
+
+			<button id="btn-78" onclick="addItem(78)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+			
+			<div id="box-78" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(78)" class="bg-red-500 text-white px-2">-</button>
+			  <span id="count-78">1</span>
+			  <button onclick="increase(78)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>
+				
+<!-- Card 5 -->
+		<div class="bg-white/10  rounded-2xl overflow-hidden shadow-lg">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787898360/icecram_float.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>IceCream Float</h3>
+			<p class="text-yellow-400 font-bold">₹180</p>
+
+			<button id="btn-79" onclick="addItem(79)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+			
+			<div id="box-79" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(79)" class="bg-red-500 text-white px-2">-</button>
+			  <span id="count-79">1</span>
+			  <button onclick="increase(79)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>
+						
+<!-- Card 6 -->
+		<div class="bg-white/10  rounded-2xl overflow-hidden shadow-lg">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787898390/orea_milkshake.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>OreaMilkShake</h3>
+			<p class="text-yellow-400 font-bold">₹160</p>
+
+			<button id="btn-80" onclick="addItem(80)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+			
+			<div id="box-80" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(80)" class="bg-red-500 text-white px-2">-</button>
+			  <span id="count-80">1</span>
+			  <button onclick="increase(80)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>		
+				
+<!--Card 7 -->
+		<div class="bg-white/10 rounded-2xl overflow-hidden shadow-lg">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787898456/butterscotch_shake.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Butterscotch Shake</h3>
+			<p class="text-yellow-400 font-bold">₹180</p>
+
+			<button id="btn-81" onclick="addItem(81)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+			
+			<div id="box-81" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(81)" class="bg-red-500 text-white px-2">-</button>
+			  <span id="count-81">1</span>
+			  <button onclick="increase(81)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>
+				
+<!--Card 8 -->
+		<div class="bg-white/10 rounded-2xl overflow-hidden shadow-lg">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787898486/berry_smoothy.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Berry Smoothy</h3>
+			<p class="text-yellow-400 font-bold">₹200</p>
+
+			<button id="btn-82" onclick="addItem(82)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+			
+			<div id="box-82" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(82)" class="bg-red-500 text-white px-2">-</button>
+			  <span id="count-82">1</span>
+			  <button onclick="increase(82)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>
+			
+<!-- Card 9-->
+		<div class="bg-white/10 rounded-2xl overflow-hidden shadow-lg">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787898533/badham_milk.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Badham Milk</h3>
+			<p class="text-yellow-400 font-bold">₹100</p>
+
+			<button id="btn-83" onclick="addItem(83)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+			
+			<div id="box-83" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(83)" class="bg-red-500 text-white px-2">-</button>
+			  <span id="count-83">1</span>
+			  <button onclick="increase(83)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>
+</section>
+<script>
+	let cart = {};
+
+			function addItem(id) {
+			  cart[id] = 1;
+
+			  document.getElementById("btn-" + id).style.display = "none";
+			  document.getElementById("box-" + id).style.display = "flex";
+			}
+
+			function increase(id) {
+			  cart[id]++;
+			  document.getElementById("count-" + id).innerText = cart[id];
+			}
+
+			function decrease(id) {
+			  if (cart[id] > 1) {
+				cart[id]--;
+				document.getElementById("count-" + id).innerText = cart[id];
+			  } else {
+				cart[id] = 0;
+				document.getElementById("box-" + id).style.display = "none";
+				document.getElementById("btn-" + id).style.display = "block";
+			  }
+			}
+</script>
+		
+<!-----------------------------------Fresh Juice--------------------------------------------->
+		
+		<div class="text-center shadow-md shadow-black text-3xl font-serif bg-orange-200 p-5 w-auto mx-10 h-15 rounded-3xl">					
+			FRESH JUICES
+		</div>										
+		
+<!--Menu Grid -->
+		<section class="max-w-6xl mx-auto px-4 py-10 grid md:grid-cols-3 gap-8">
+<!--Card 1 -->
+			<div class="bg-white/10 rounded-2xl overflow-hidden shadow-lg">
+		  <img src="images/lemon juices.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Lemon Juice</h3>
+			<p class="text-yellow-400 font-bold">₹30</p>
+
+			<button id="btn-84" onclick="addItem(84)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+			
+			<div id="box-84" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(84)" class="bg-red-500 text-white px-2">-</button>
+			  <span id="count-84">1</span>
+			  <button onclick="increase(84)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>
+				
+<!-- Card 2 -->
+		<div class="bg-white/10 rounded-2xl overflow-hidden shadow-lg">
+		  <img src="images/mixed juice.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Mixed Juice</h3>
+			<p class="text-yellow-400 font-bold">₹100</p>
+
+			<button id="btn-85" onclick="addItem(85)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+			
+			<div id="box-85" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(85)" class="bg-red-500 text-white px-2">-</button>
+			  <span id="count-85">1</span>
+			  <button onclick="increase(85)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>
+				
+<!-- Card 3 -->
+		<div class="bg-white/10  rounded-2xl overflow-hidden shadow-lg">
+		  <img src="images/pineapple-juice.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Pineapple Juice</h3>
+			<p class="text-yellow-400 font-bold">₹80</p>
+
+			<button id="btn-86" onclick="addItem(86)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+			
+			<div id="box-86" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(86)" class="bg-red-500 text-white px-2">-</button>
+			  <span id="count-86">1</span>
+			  <button onclick="increase(86)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>
+				
+<!-- Card 4 -->
+		<div class="bg-white/10  rounded-2xl overflow-hidden shadow-lg">
+		  <img src="images/straberry and mint.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Straberry & Mint</h3>
+			<p class="text-yellow-400 font-bold">₹120</p>
+
+			<button id="btn-87" onclick="addItem(87)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+			
+			<div id="box-87" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(87)" class="bg-red-500  text-white px-2">-</button>
+			  <span id="count-87">1</span>
+			  <button onclick="increase(87)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>
+				
+<!-- Card 5 -->
+		<div class="bg-white/10  rounded-2xl overflow-hidden shadow-lg">
+		  <img src="images/ginger and lemon.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Ginjer Lemon Fizz</h3>
+			<p class="text-yellow-400 font-bold">₹80</p>
+
+			<button id="btn-88" onclick="addItem(88)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+			
+			<div id="box-88" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(88)" class="bg-red-500 text-white px-2">-</button>
+			  <span id="count-88">1</span>
+			  <button onclick="increase(88)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>
+					
+<!-- Card 6 -->
+		<div class="bg-white/10 rounded-2xl overflow-hidden shadow-lg">
+		  <img src="images/kiwi mint cooler.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Kiwi Mint Cooler</h3>
+			<p class="text-yellow-400 font-bold">85</p>
+
+			<button id="btn-89" onclick="addItem(89)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+			
+			<div id="box-89" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(89)" class="bg-red-500 text-white px-2">-</button>
+			  <span id="count-89">1</span>
+			  <button onclick="increase(89)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>	
+				
+<!--Card 7 -->
+		<div class="bg-white/10  rounded-2xl overflow-hidden shadow-lg">
+		  <img src="images/pineapple cooler.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Pineapple Cooler</h3>
+			<p class="text-yellow-400 font-bold">₹100</p>
+
+			<button id="btn-90" onclick="addItem(90)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+			
+			<div id="box-90" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(90)" class="bg-red-500 text-white px-2">-</button>
+			  <span id="count-90">1</span>
+			  <button onclick="increase(90)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>
+				
+<!-- Card 8 -->
+		<div class="bg-white/10 rounded-2xl overflow-hidden shadow-lg">
+		  <img src="images/mixedfruit monktail.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>MixedFruit Moctail</h3>
+			<p class="text-yellow-400 font-bold">₹150</p>
+
+			<button id="btn-91" onclick="addItem(91)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+			
+			<div id="box-91" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(91)" class="bg-red-500 text-white px-2">-</button>
+			  <span id="count-91">1</span>
+			  <button onclick="increase(91)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>
+			
+<!-- Card 9-->
+		<div class="bg-white/10  rounded-2xl overflow-hidden shadow-lg">
+		  <img src="images/cocountmint cooler.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>CocountMint Cooler</h3>
+			<p class="text-yellow-400 font-bold">₹100</p>
+
+			<button id="btn-92" onclick="addItem(92)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+			
+			<div id="box-92" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(92)" class="bg-red-500 text-white px-2">-</button>
+			  <span id="count-92">1</span>
+			  <button onclick="increase(92)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>
+</section>
+<script>
+	let cart = {};
+
+			function addItem(id) {
+			  cart[id] = 1;
+
+			  document.getElementById("btn-" + id).style.display = "none";
+			  document.getElementById("box-" + id).style.display = "flex";
+			}
+
+			function increase(id) {
+			  cart[id]++;
+			  document.getElementById("count-" + id).innerText = cart[id];
+			}
+
+			function decrease(id) {
+			  if (cart[id] > 1) {
+				cart[id]--;
+				document.getElementById("count-" + id).innerText = cart[id];
+			  } else {
+				cart[id] = 0;
+				document.getElementById("box-" + id).style.display = "none";
+				document.getElementById("btn-" + id).style.display = "block";
+			  }
+			}
+	</script>	
+		
+<!-----------------------------Mixed juice------------------------------------------------------>
+
+
+		<div class="text-center shadow-md shadow-black text-3xl font-serif bg-orange-200 p-5 w-auto mx-10 h-15 rounded-3xl">				
+			Mixed & FRESH JUICES
+		</div>											
+		
+<!--Menu Grid -->
+		<section class="max-w-6xl mx-auto px-4 py-10 grid md:grid-cols-3 gap-8">
+<!--Card 1 -->
+		<div class="bg-white/10 rounded-2xl overflow-hidden shadow-lg">
+			<img src="images/dragon fruite juice.jpg" class="w-full h-48 object-cover">
+			<div class="p-4">
+				<h3>Dragon Fruite Juice</h3>
+				<p class="text-yellow-400 font-bold">₹150</p>
+
+				<button id="btn-93" onclick="addItem(93)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+				Add 🛒
+				</button>
+			
+			<div id="box-93" class="hidden flex gap-2 mt-2 justify-between items-center">
+				<button onclick="decrease(93)" class="bg-red-500 text-white px-2">-</button>
+					<span id="count-93">1</span>
+				<button onclick="increase(93)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+			</div>
+		</div>
+		
+<!-- Card 2 -->
+
+		<div class="bg-white/10 rounded-2xl overflow-hidden shadow-lg">
+			<img src="images/apple juice.jpg" class="w-full h-48 object-cover">
+			<div class="p-4">
+				<h3>Apple Juice</h3>
+				<p class="text-yellow-400 font-bold">₹100</p>
+
+				<button id="btn-94" onclick="addItem(94)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+				Add 🛒
+				</button>
+			
+			<div id="box-94" class="hidden flex gap-2 mt-2 justify-between items-center">
+				<button onclick="decrease(944)" class="bg-red-500  text-white px-2">-</button>
+					<span id="count-94">1</span>
+				<button onclick="increase(94)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+			</div>
+		</div>
+		
+<!-- Card 3 -->
+
+		<div class="bg-white/10  rounded-2xl overflow-hidden shadow-lg">
+		  <img src="images/kiwi juice.jpg" class="w-full h-48 object-cover">
+			<div class="p-4">
+			<h3>Kiwi Juice</h3>
+			<p class="text-yellow-400 font-bold">₹160</p>
+
+			<button id="btn-95" onclick="addItem(95)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+			
+			<div id="box-95" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(95)" class="bg-red-500 text-white px-2">-</button>
+			  <span id="count-95">1</span>
+			  <button onclick="increase(95)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+			</div>
+		</div>
+		
+<!-- Card 4 -->
+
+		<div class="bg-white/10  rounded-2xl overflow-hidden shadow-lg">
+		  <img src="images/mango juices.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Mango Shake</h3>
+			<p class="text-yellow-400 font-bold">₹120</p>
+
+			<button id="btn-96" onclick="addItem(96)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+			
+			<div id="box-96" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(96)" class="bg-red-500 text-white px-2">-</button>
+			  <span id="count-96">1</span>
+			  <button onclick="increase(96)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>
+		
+<!-- Card 5 -->
+
+		<div class="bg-white/10  rounded-2xl overflow-hidden shadow-lg">
+		  <img src="images/orange juice.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Orange fuice</h3>
+			<p class="text-yellow-400 font-bold">₹90</p>
+
+			<button id="btn-97" onclick="addItem(97)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+			
+			<div id="box-97" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(97)" class="bg-red-500 text-white  px-2">-</button>
+			  <span id="count-97">1</span>
+			  <button onclick="increase(97)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>
+			
+<!-- Card 6 -->
+
+		<div class="bg-white/10 rounded-2xl overflow-hidden shadow-lg">
+		  <img src="images/wattermelon juice.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Wattermelon Juice</h3>
+			<p class="text-yellow-400 font-bold">85</p>
+
+			<button id="btn-98" onclick="addItem(98)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+			
+			<div id="box-98" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(98)" class="bg-red-500 text-white px-2">-</button>
+			  <span id="count-98">1</span>
+			  <button onclick="increase(98)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>	
+		
+<!--Card 7 -->
+
+		<div class="bg-white/10  rounded-2xl overflow-hidden shadow-lg">
+		  <img src="images/lemon juice.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Lemon Juice</h3>
+			<p class="text-yellow-400 font-bold">₹30</p>
+
+			<button id="btn-99" onclick="addItem(99)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+			
+			<div id="box-99" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(99)" class="bg-red-500 text-white px-2">-</button>
+			  <span id="count-99">1</span>
+			  <button onclick="increase(99)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>
+				
+<!-- Card 8 -->
+
+		<div class="bg-white/10  rounded-2xl overflow-hidden shadow-lg">
+		  <img src="images/graph juice.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Graph Juice</h3>
+			<p class="text-yellow-400 font-bold">₹50</p>
+
+			<button id="btn-100" onclick="addItem(100)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+			
+			<div id="box-100" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(100)" class="bg-red-500 text-white px-2">-</button>
+			  <span id="count-100">1</span>
+			  <button onclick="increase(100)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>
+	
+<!-- Card 9-->
+
+		<div class="bg-white/10  rounded-2xl overflow-hidden shadow-lg">
+		  <img src="images/sugar can juice.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>SugarCane Juice</h3>
+			<p class="text-yellow-400 font-bold">₹50</p>
+
+			<button id="btn-101" onclick="addItem(101)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+			
+			<div id="box-101" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(101)" class="bg-red-500 text-white px-2">-</button>
+			  <span id="count-101">1</span>
+			  <button onclick="increase(101)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>
+	</section>
+<script>
+	let cart = {};
+
+			function addItem(id) {
+			  cart[id] = 1;
+
+			  document.getElementById("btn-" + id).style.display = "none";
+			  document.getElementById("box-" + id).style.display = "flex";
+			}
+
+			function increase(id) {
+			  cart[id]++;
+			  document.getElementById("count-" + id).innerText = cart[id];
+			}
+
+			function decrease(id) {
+			  if (cart[id] > 1) {
+				cart[id]--;
+				document.getElementById("count-" + id).innerText = cart[id];
+			  } else {
+				cart[id] = 0;
+				document.getElementById("box-" + id).style.display = "none";
+				document.getElementById("btn-" + id).style.display = "block";
+			  }
+			}
+	</script>	
+		
+<!-------------------------------icecream------------------------------------------------------------------------->		
+
+		<div class="text-center shadow-md shadow-black text-3xl font-serif bg-orange-200 p-5 w-auto mx-10 h-15 rounded-3xl">
+			CLASSIC ICECREAM FLAVOURS		
+		</div>										
+		
+<!--Menu Grid -->
+		<section class="max-w-6xl mx-auto px-4 py-10 grid md:grid-cols-3 gap-8">
+<!--Card 1 -->
+		<div class="bg-white/10  rounded-2xl overflow-hidden shadow-lg">
+			<img src="images/vennila.jpg" class="w-full h-48 object-cover">
+			<div class="p-4">
+				<h3>Vennila</h3>
+				<p class="text-yellow-400 font-bold">₹80</p>
+
+				<button id="btn-102" onclick="addItem(102)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+				Add 🛒
+				</button>
+			
+			<div id="box-102" class="hidden flex gap-2 mt-2 justify-between items-center">
+				<button onclick="decrease(102)" class="bg-red-500 text-white px-2">-</button>
+					<span id="count-102">1</span>
+				<button onclick="increase(102)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+			</div>
+		</div>
+		
+<!-- Card 2 -->
+
+		<div class="bg-white/10 rounded-2xl overflow-hidden shadow-lg">
+			<img src="images/blackcurrent.jpg" class="w-full h-48 object-cover">
+			<div class="p-4">
+				<h3>BlackCurrent</h3>
+				<p class="text-yellow-400 font-bold">₹100</p>
+
+				<button id="btn-103" onclick="addItem(103)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+				Add 🛒
+				</button>
+			
+			<div id="box-103" class="hidden flex gap-2 mt-2 justify-between items-center">
+				<button onclick="decrease(103)" class="bg-red-500  text-white px-2">-</button>
+					<span id="count-103">1</span>
+				<button onclick="increase(103)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+			</div>
+		</div>
+		
+<!-- Card 3 -->
+
+		<div class="bg-white/10 rounded-2xl overflow-hidden shadow-lg">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787900496/butterscotch-ice-cream-recipe.jpg" class="w-full h-48 object-cover">
+			<div class="p-4">
+			<h3>Butterscotch</h3>
+			<p class="text-yellow-400 font-bold">₹160</p>
+
+			<button id="btn-104" onclick="addItem(104)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+			
+			<div id="box-104" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(104)" class="bg-red-500 text-white px-2">-</button>
+			  <span id="count-104">1</span>
+			  <button onclick="increase(104)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+			</div>
+		</div>
+		
+<!-- Card 4 -->
+
+		<div class="bg-white/10  rounded-2xl overflow-hidden shadow-lg">
+		  <img src="images/straberry milkshake.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Straberry</h3>
+			<p class="text-yellow-400 font-bold">₹85</p>
+
+			<button id="btn-105" onclick="addItem(105)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+			
+			<div id="box-105" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(105)" class="bg-red-500 text-white px-2">-</button>
+			  <span id="count-105">1</span>
+			  <button onclick="increase(105)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>
+		
+<!-- Card 5 -->
+
+		<div class="bg-white/10  rounded-2xl overflow-hidden shadow-lg">
+		  <img src="images/cookies and creams.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Cookies and Cream</h3>
+			<p class="text-yellow-400 font-bold">₹100</p>
+
+			<button id="btn-106" onclick="addItem(106)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+			
+			<div id="box-106" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(106)" class="bg-red-500 text-white px-2">-</button>
+			  <span id="count-106">1</span>
+			  <button onclick="increase(106)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>
+			
+<!-- Card 6 -->
+
+		<div class="bg-white/10 rounded-2xl overflow-hidden shadow-lg">
+		  <img src="images/caramel crunch.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Caramel Crunch</h3>
+			<p class="text-yellow-400 font-bold">₹85</p>
+
+			<button id="btn-107" onclick="addItem(107)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+			
+			<div id="box-107" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(107)" class="bg-red-500 text-white px-2">-</button>
+			  <span id="count-107">1</span>
+			  <button onclick="increase(107)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>	
+		
+<!--Card 7 -->
+
+		<div class="bg-white/10  rounded-2xl overflow-hidden shadow-lg">
+		  <img src="images/chocolate ship.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Chocolate Ship</h3>
+			<p class="text-yellow-400 font-bold">₹60</p>
+
+			<button id="btn-108" onclick="addItem(108)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+			
+			<div id="box-108" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(108)" class="bg-red-500 text-white px-2">-</button>
+			  <span id="count-108">1</span>
+			  <button onclick="increase(108)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>
+				
+<!-- Card 8 -->
+
+		<div class="bg-white/10  rounded-2xl overflow-hidden shadow-lg">
+		  <img src="images/pistha.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>pistha</h3>
+			<p class="text-yellow-400 font-bold">₹80</p>
+
+			<button id="btn-109" onclick="addItem(109)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+			
+			<div id="box-109" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(109)" class="bg-red-500 text-white px-2">-</button>
+			  <span id="count-109">1</span>
+			  <button onclick="increase(109)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>
+	
+<!-- Card 9-->
+
+		<div class="bg-white/10  rounded-2xl overflow-hidden shadow-lg">
+		  <img src="images/honey almond.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Honey Almond</h3>
+			<p class="text-yellow-400 font-bold">₹120</p>
+
+			<button id="btn-110" onclick="addItem(110)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+			
+			<div id="box-110" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(110)" class="bg-red-500 text-white px-2">-</button>
+			  <span id="count-110">1</span>
+			  <button onclick="increase(110)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>
+	</section>
+	<script>
+	let cart = {};
+
+			function addItem(id) {
+			  cart[id] = 1;
+
+			  document.getElementById("btn-" + id).style.display = "none";
+			  document.getElementById("box-" + id).style.display = "flex";
+			}
+
+			function increase(id) {
+			  cart[id]++;
+			  document.getElementById("count-" + id).innerText = cart[id];
+			}
+
+			function decrease(id) {
+			  if (cart[id] > 1) {
+				cart[id]--;
+				document.getElementById("count-" + id).innerText = cart[id];
+			  } else {
+				cart[id] = 0;
+				document.getElementById("box-" + id).style.display = "none";
+				document.getElementById("btn-" + id).style.display = "block";
+			  }
+			}
+	</script>
+
+<!----------------------------premium icecream-------------------------------->
+
+		<div class="text-center shadow-md shadow-black text-3xl font-serif bg-orange-200 p-5 w-auto mx-10 h-15 rounded-3xl">
+			PREMIUM ICECREAM 	
+		</div>											
+		
+<!--Menu Grid -->
+		<section class="max-w-6xl mx-auto px-4 py-10 grid md:grid-cols-3 gap-8">
+<!--Card 1 -->
+		<div class="bg-white/10  rounded-2xl overflow-hidden shadow-lg">
+		  <img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787897904/kulfi.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Kulfi</h3>
+			<p class="text-yellow-400 font-bold">₹50</p>
+
+			<button id="btn-111" onclick="addItem(111)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+			
+			<div id="box-111" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(111)" class="bg-red-500 text-white px-2">-</button>
+			  <span id="count-111">1</span>
+			  <button onclick="increase(111)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>	
+		
+<!-- Card 2 -->
+		<div class="bg-white/10  rounded-2xl overflow-hidden shadow-lg">
+		  <img src="images/belgain choco.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Belgain choco</h3>
+			<p class="text-yellow-400 font-bold">₹150</p>
+
+			<button id="btn-112" onclick="addItem(112)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+			
+			<div id="box-112" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(112)" class="bg-red-500 text-white px-2">-</button>
+			  <span id="count-112">1</span>
+			  <button onclick="increase(112)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>
+		
+<!-- Card 3 -->
+		<div class="bg-white/10  rounded-2xl overflow-hidden shadow-lg">
+		  <img src="images/oreo deluxe.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Oreo Deluxe</h3>
+			<p class="text-yellow-400 font-bold">₹160</p>
+
+			<button id="btn-113" onclick="addItem(113)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+			
+			<div id="box-113" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(113)" class="bg-red-500  text-white px-2">-</button>
+			  <span id="count-113">1</span>
+			  <button onclick="increase(113)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>
+		
+<!-- Card 4 -->
+		<div class="bg-white/10 rounded-2xl overflow-hidden shadow-lg">
+		  <img src="images/straberry cheasecake.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Straberry Chessecake</h3>
+			<p class="text-yellow-400 font-bold">₹120</p>
+			<button id="btn-114" onclick="addItem(114)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+			
+			<div id="box-114" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(114)" class="bg-red-500 text-white px-2">-</button>
+			  <span id="count-114">1</span>
+			  <button onclick="increase(114)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>
+			
+<!-- Card 5 -->
+		<div class="bg-white/10 rounded-2xl overflow-hidden shadow-lg">
+		  <img src="images/honey almond.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Honey Nuts Crunch</h3>
+			<p class="text-yellow-400 font-bold">₹160</p>
+
+			<button id="btn-115" onclick="addItem(115)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+			
+			<div id="box-115" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(115)" class="bg-red-500 text-white px-2">-</button>
+			  <span id="count-115">1</span>
+			  <button onclick="increase(115)" class="bg-green-500 text-white px-2">+</button>
+			</div>
+		  </div>
+		</div>
+						
+<!-- Card 6 -->
+		<div class="bg-white/10  rounded-2xl overflow-hidden shadow-lg">
+		  <img src="images/orange zest.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Orange Zest</h3>
+			<p class="text-yellow-400 font-bold">₹120</p>
+
+			<button id="btn-116" onclick="addItem(116)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+			
+			<div id="box-116" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(116)" class="bg-red-500 px-2 text-white">-</button>
+			  <span id="count-116">1</span>
+			  <button onclick="increase(116)" class="bg-green-500 px-2 text-white">+</button>
+			</div>
+		  </div>
+		</div>		
+</section>
+<script>
+	let cart = {};
+
+			function addItem(id) {
+			  cart[id] = 1;
+
+			  document.getElementById("btn-" + id).style.display = "none";
+			  document.getElementById("box-" + id).style.display = "flex";
+			}
+
+			function increase(id) {
+			  cart[id]++;
+			  document.getElementById("count-" + id).innerText = cart[id];
+			}
+
+			function decrease(id) {
+			  if (cart[id] > 1) {
+				cart[id]--;
+				document.getElementById("count-" + id).innerText = cart[id];
+			  } else {
+				cart[id] = 0;
+				document.getElementById("box-" + id).style.display = "none";
+				document.getElementById("btn-" + id).style.display = "block";
+			  }
+			}
+</script>		
+
+<!--------------------------------sundeas and combo-------------------------------------------->
+
+		<div class="text-center shadow-md shadow-black text-3xl font-serif bg-orange-200 p-5 w-auto mx-10 h-15 rounded-3xl">
+			SUNDEAS & COMBO		
+		</div>										
+		
+<!-- Menu Grid -->
+		<section class="max-w-6xl mx-auto px-4 py-10 grid md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+		<div class="bg-white/10  rounded-2xl overflow-hidden shadow-lg">
+		  <img src="images/cookies and creams.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Cookies and Cream</h3>
+			<p class="text-yellow-400 font-bold">₹150</p>
+
+			<button id="btn-117" onclick="addItem(117)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+			
+			<div id="box-117" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(117)" class="bg-red-500 px-2 text-white">-</button>
+			  <span id="count-117">1</span>
+			  <button onclick="increase(117)" class="bg-green-500 px-2 text-white">+</button>
+			</div>
+		  </div>
+		</div>
+		
+<!-- Card 2 -->
+		<div class="bg-white/10  rounded-2xl overflow-hidden shadow-lg">
+		  <img src="images/fruit sundea.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Fruit Sundea</h3>
+			<p class="text-yellow-400 font-bold">₹160</p>
+
+			<button id="btn-118" onclick="addItem(118)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+			
+			<div id="box-118" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(118)" class="bg-red-500 px-2 text-white">-</button>
+			  <span id="count-118">1</span>
+			  <button onclick="increase(118)" class="bg-green-500 px-2 text-white">+</button>
+			</div>
+		  </div>
+		</div>
+		
+<!-- Card 3 -->
+		<div class="bg-white/10  rounded-2xl overflow-hidden shadow-lg">
+		  <img src="images/chocolate sundea.jpg" class="w-full h-48 object-cover">
+		  <div class="p-4">
+			<h3>Chocolate Sundea</h3>
+			<p class="text-yellow-400 font-bold">₹180</p>
+
+			<button id="btn-119" onclick="addItem(119)" class="bg-yellow-400 w-full mt-2 py-2 rounded">
+			Add 🛒
+			</button>
+			
+			<div id="box-119" class="hidden flex gap-2 mt-2 justify-between items-center">
+			  <button onclick="decrease(119)" class="bg-red-500 px-2 text-white">-</button>
+			   <span id="count-119">1</span>
+			  <button onclick="increase(119)" class="bg-green-500 px-2 text-white">+</button>
+			</div>
+		  </div>
+		</div>	
+		</section>
+		<script>
+	let cart = {};
+
+			function addItem(id) {
+			  cart[id] = 1;
+
+			  document.getElementById("btn-" + id).style.display = "none";
+			  document.getElementById("box-" + id).style.display = "flex";
+			}
+
+			function increase(id) {
+			  cart[id]++;
+			  document.getElementById("count-" + id).innerText = cart[id];
+			}
+
+			function decrease(id) {
+			  if (cart[id] > 1) {
+				cart[id]--;
+				document.getElementById("count-" + id).innerText = cart[id];
+			  } else {
+				cart[id] = 0;
+				document.getElementById("box-" + id).style.display = "none";
+				document.getElementById("btn-" + id).style.display = "block";
+			  }
+			}
+</script>
+		
+
+
+<!--footer-->			
+	<footer class="bg-white text-white p-10 w-full mx-auto">
+	<div class="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-8">
+			
+<!-- Logo + About -->
+			<div>
+			  <h2 class="text-lg font-semibold text-red-400">FOOD FIESTA</h2>
+			  <p class="mt-3 text-black">
+				Serving delicious food with authentic taste and quality ingredients.
+			  </p>
+			</div>
+
+<!-- Quick Links -->
+			<div>
+			  <h3 class="text-lg font-semibold  text-red-400 mb-3">QUICK LINK</h3>
+			  <ul class="space-y-2 text-black">
+				<li><a href="home .html" class="hover:text-orange-400">Home</a></li>
+				<li><a href="Menu.html" class="hover:text-orange-400">Menu</a></li>
+				<li><a href="Catagery.html" class="hover:text-orange-400">Category</a></li>
+				<li><a href="About us.html" class="hover:text-orange-400">About</a></li>
+				<li><a href="contact .html"class="hover:text-orange-400">Contact</a></li>
+			  </ul>
+			</div>
+
+<!-- Contact Info -->
+				<div>
+				  <h3 class="text-lg  text-red-400 font-semibold mb-3">CONTACT</h3>
+				  <p class="text-black">📍 Chennai, India</p>
+				  <p class="text-black">📞 +91 12345 67890</p>
+				  <p class="text-black">📧 contact@foodfesta.com</p>
+				</div>
+
+<!-- Social Media -->
+				<div>
+				  <h3 class="text-lg text-red-400 font-semibold mb-3">FOLLOW US</h3>
+				  <div class="flex gap-4 text-xl">
+					<span class="hover:text-orange-400 cursor-pointer">📘</span>
+					<span class="hover:text-orange-400 cursor-pointer">📸</span>
+					<span class="hover:text-orange-400 cursor-pointer">🐦</span>
+				  </div>
+				</div>
+			</div>
+
+<!-- Bottom -->
+			  <div class="md:text-center mt-8  pt-4 text-black">
+				© 2026 Food Festa Restaurant. All rights reserved.
+			  </div>
+			</footer>		
+<script>
+// Dark mode
+	function toggleDark(){ 
+	 document.body.classList.toggle("bg-gray-900"); 
+	 document.body.classList.toggle("text-white"); 
+	}
+</script>	
+</body>
+</html>

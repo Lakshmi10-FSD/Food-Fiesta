@@ -1,0 +1,749 @@
+<html>
+	<head><title>RESTAURENT</title>
+	<meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+	</head>
+		<body>
+		<nav class="fixed top-0 left-0 w-full bg-orange-300 shadow-md z-50">
+		<div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+			<img src="images/logo restaurent.png" class="w-40 h-20 max-w-full object-cover">
+
+    <!-- Desktop Menu -->
+			<ul class="hidden md:flex space-x-6 text-blue-900 font-serif text-lg">
+			  <li><a href="index.html" class="hover:text-green-600">Home</a></li>
+			  <li><a href="Menu.html" class="hover:text-green-600">Menu</a></li>
+			  <li><a href="Catagery.html" class="hover:text-green-600">Category</a></li>
+			  <li><a href="About us.html" class="hover:text-green-600">About Us</a></li>
+			  <li><a href="contact .html" class="hover:text-green-600">Contact</a></li>
+			</ul>
+
+    <!-- Toggle Button -->
+		<button onclick="toggleDark()" class="text-lg md:text-xl">🌙</button>
+			<label for="menuToggle" class="md:hidden flex flex-col space-y-1.5 cursor-pointer">
+			  <span class="block w-6 h-0.5 bg-gray-800"></span>
+			  <span class="block w-6 h-0.5 bg-gray-800"></span>
+			  <span class="block w-6 h-0.5 bg-gray-800"></span>
+			</label>
+		</div>
+
+  <!-- Hidden Checkbox -->
+			<input type="checkbox" id="menuToggle" class="hidden peer">
+
+  <!-- Mobile Menu -->
+		  <div class="hidden peer-checked:block md:hidden bg-orange-200 px-6 py-6">
+			<ul class="flex flex-col space-y-4 text-white text-lg">
+			  <li><a href="index.html" class="block hover:text-pink-300">Home</a></li>
+			  <li><a href="Menu.html" class="hover:text-orange-400">Menu</a></li>
+				<li><a href="Catagery.html" class="hover:text-orange-400">Category</a></li>
+				<li><a href="About us.html" class="hover:text-orange-400">About</a></li>
+				<li><a href="contact .html"class="hover:text-orange-400">Contact</a></li>
+			</ul>
+		  </div>
+		</nav>
+<!-- Spacer (important for fixed navbar) -->
+		<div class="h-24"></div>
+	
+	<div>
+		<section class="relative h-screen w-full mb-20">
+			<img src="images/non veg food.png" class="absolute inset-0 w-full h-full object-cover">
+			<div class="absolute inset-0 bg-black/60"></div>
+			<div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
+				<h1 class="text-white text-4xl md:text-6xl font-bold mb-4">
+					Taste the Tradition 🍛
+				</h1>
+			
+				<p class="text-gray-200 text-lg md:text-xl mb-6 max-w-2xl">
+					Authentic flavors crafted with passion, bringing you the true essence of Indian cuisine.
+				</p>
+				
+				<div class="flex gap-4">
+				<button onclick="openBooking()" class="border border-white text-white px-4 sm:px-6 py-2 sm:py-3 text-base sm:text-lg rounded-lg hover:bg-white hover:text-black transition w-full sm:w-auto">
+					Book Table
+				</button>
+				</div>
+			</div>
+		</section>
+	</div>
+			
+<!-- 🍛 Categories -->
+		<section class="py-16 max-w-7xl mx-auto px-4">
+			<h2 class="text-3xl font-bold text-center mb-10">Categories</h2>
+
+			<div class="grid md:grid-cols-4 gap-6">
+    
+			<div class="bg-gray-300 p-4 rounded-xl hover:scale-105 transition">
+				<img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787893494/edli.jpg" class=" w-full h-65 rounded-lg mb-4">
+				<h3 class="text-xl font-semibold">Veg Specials</h3>
+			</div>
+
+			<div class="bg-gray-300 p-4 rounded-xl hover:scale-105 transition">
+				 <img src="images/biriyani.jpg" class="w-full h-65 rounded-lg mb-4">
+				 <h3 class="text-xl font-semibold">Non-Veg</h3>
+			</div>
+
+			<div class="bg-gray-300 p-4 rounded-xl hover:scale-105 transition">
+				 <img src="images/dhosa c.jpg"class="rounded-lg mb-4">
+				 <h3 class="text-xl font-semibold">Breakfast</h3>
+			</div>
+
+			<div class="bg-gray-300 p-4 rounded-xl hover:scale-105 transition">
+				<img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787897517/waffle_c.jpg" " class="w-full h-65 rounded-lg mb-4">
+				 <h3 class="text-xl font-semibold">Desserts</h3>
+			</div>
+			
+			<div class="bg-gray-300 p-4 rounded-xl hover:scale-105 transition">
+				<img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787896324/vegtable_soup.jpg" class="w-full h-65 rounded-lg mb-4">
+				 <h3 class="text-xl font-semibold">Veg Soup</h3>
+			</div>
+			
+			<div class="bg-gray-300 p-4 rounded-xl hover:scale-105 transition">
+				<img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787896850/mutton_peper_soup.jpg" class="w-full h-65 rounded-lg mb-4">
+				 <h3 class="text-xl font-semibold">NonVeg Soup</h3>
+			</div>
+			
+			<div class="bg-gray-300 p-4 rounded-xl hover:scale-105 transition">
+				<img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787898033/falooda.jpg"class="w-full h-65 rounded-lg mb-4">
+				 <h3 class="text-xl font-semibold">Juices</h3>
+			</div>
+			
+			<div class="bg-gray-300 p-4 rounded-xl hover:scale-105 transition">
+				<img src="images/blackcurrent.jpg" class="w-full h-65 rounded-lg mb-4">
+				 <h3 class="text-xl font-semibold">IceCream</h3>
+			</div>
+			
+
+			</div>
+		</section>
+
+<!-- ⭐ Popular Dishes -->
+		<section class="bg-gray-500 py-16">
+		<div class="max-w-7xl mx-auto px-4">
+			<h2 class="text-3xl font-bold text-center mb-10">Popular Dishes</h2>
+
+		<div class="grid md:grid-cols-3 gap-6">
+
+			<div class="bg-gray-100 p-4 rounded-xl">
+				<img src="images/biriyani.webp" class="w-full h-75 rounded-lg mb-4">
+				<h3 class="text-xl font-semibold">Chicken Biryani</h3>
+			<p class="text-orange-400">₹250</p>
+			</div>
+
+			<div class="bg-gray-100 p-4 rounded-xl">
+				<img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787894961/paneer_tikka_c.jpg" class="w-full h-75 rounded-lg mb-4">
+				<h3 class="text-xl font-semibold">Paneer Tikka</h3>
+				<p class="text-orange-400">₹180</p>
+			</div>
+
+			<div class="bg-gray-100 p-4 rounded-xl">
+				<img src="https://res.cloudinary.com/pss3qjws/image/upload/v1787894523/mutton_pepperfey.png" class="rounded-lg mb-4">
+				<h3 class="text-xl font-semibold">Mutton Fry</h3>
+				<p class="text-orange-400">₹320</p>
+			</div>
+		</div>
+	  </div>
+	</section>
+	
+<!-- ABOUT SECTION -->
+
+<section class="py-20 bg-orange-50">
+    <div class="max-w-7xl mx-auto px-4">
+        <!-- Heading -->
+        <div class="text-center mb-14">
+            <p class="text-orange-600 font-semibold uppercase tracking-widest">
+                About Us
+            </p>
+            <h2 class="text-4xl md:text-5xl font-bold mt-3">
+                Discover Our Story
+            </h2>
+            <div class="w-20 h-1 bg-orange-500 mx-auto mt-5 rounded-full"></div>
+            <p class="text-gray-600 max-w-2xl mx-auto mt-5">
+                Get to know our journey, our talented team,
+                our guests and our commitment to quality.
+            </p>
+        </div>
+ <!-- ABOUT CARDS -->
+        <div class="grid md:grid-cols-2 gap-8">
+            <!-- 📖 OUR STORY -->
+            <div class="bg-white rounded-3xl shadow-lg p-8 hover:-translate-y-2 transition duration-300">
+                <div class="text-5xl mb-5">
+                    📖
+                </div>
+                <h3 class="text-2xl font-bold mb-4">
+                    Our Story
+                </h3>
+                <p class="text-gray-600 leading-7 mb-6"> 
+					We started with a simple dream of serving delicious food made with passion. Over the years,
+                    our restaurant has become a place where families
+                    and friends create beautiful memories together.
+                </p>
+                <button onclick="openAboutPage('storyPage')"  class="bg-orange-500 text-white px-6 py-3 rounded-full font-semibold  hover:bg-orange-600 transition">
+                    View Details →
+                </button>
+            </div>
+ <!-- CHEF & TEAM -->
+            <div class="bg-white rounded-3xl shadow-lg p-8  hover:-translate-y-2 transition duration-300">
+                <div class="text-5xl mb-5">
+                    👨‍🍳
+                </div>
+                <h3 class="text-2xl font-bold mb-4">
+                    Chef & Team
+                </h3>
+                <p class="text-gray-600 leading-7 mb-6">
+                    Behind every delicious dish is a talented team. Meet our chefs who bring creativity, experience and passion to every plate.
+                </p>
+                <button onclick="openAboutPage('chefPage')" class="bg-orange-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-orange-600 transition">
+                    View Details →
+                </button>
+            </div>
+ <!--  CUSTOMER REVIEWS -->
+            <div class="bg-white rounded-3xl shadow-lg p-8 hover:-translate-y-2 transition duration-300">
+                <div class="text-5xl mb-5">
+                    💬
+                </div>
+                <h3 class="text-2xl font-bold mb-4">
+                    Customer Reviews
+                </h3>
+                <p class="text-gray-600 leading-7 mb-6">
+                    Our guests are at the heart of everything we do.Read their experiences and discover why they love dining with us.
+                </p>
+                <button onclick="openAboutPage('reviewPage')"  class="bg-orange-500 text-white px-6 py-3 rounded-full font-semibold  hover:bg-orange-600 transition">
+                    View Details →
+                </button>
+            </div>
+<!--  HYGIENE & QUALITY -->
+            <div class="bg-white rounded-3xl shadow-lg p-8  hover:-translate-y-2 transition duration-300">
+                <div class="text-5xl mb-5">
+                    🧼
+                </div>
+                <h3 class="text-2xl font-bold mb-4">
+                    Hygiene & Quality
+                </h3>
+                <p class="text-gray-600 leading-7 mb-6">
+                    Fresh ingredients, clean preparation and consistent quality are the promise we make to every guest.
+                </p>
+                <button  onclick="openAboutPage('promisePage')"  class="bg-orange-500 text-white px-6 py-3 rounded-full font-semibold  hover:bg-orange-600 transition">
+                    View Details →
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+	
+<!-- ABOUT DETAIL PAGES                                        
+<!-- ========================================================= -->
+	<div id="aboutDetailPages" class="hidden fixed inset-0 z-[100] bg-white overflow-y-auto">
+	  <div id="storyPage" class="hidden min-h-screen bg-orange-50">
+		<div class="max-w-6xl mx-auto px-4 py-10">
+		  <!-- Back -->
+		  <button onclick="closeAboutPage()"class="mb-8 bg-gray-800 text-white px-5 py-2 rounded-full hover:bg-gray-700 transition">
+			← Back
+		  </button>
+		  <div class="text-center mb-12">
+			<p class="text-orange-600 font-semibold uppercase tracking-widest">
+			  Our Journey
+			</p>
+			<h1 class="text-4xl md:text-6xl font-bold mt-3">
+			  📖 Our Story
+			</h1>
+			<div class="w-20 h-1 bg-orange-500 mx-auto mt-5 rounded-full"></div>
+		  </div>
+		  <div class="grid md:grid-cols-2 gap-10 items-center">
+			<img src="images/exterior.png" class="w-full h-80 md:h-[450px] object-cover rounded-3xl shadow-xl" alt="Restaurant">
+			<div>
+			  <p class="text-orange-600 font-semibold text-lg mb-3">
+				Since 2018
+			  </p>
+			  <h2 class="text-3xl font-bold mb-5">
+				From a Small Dream to a Place Full of Memories
+			  </h2>
+			  <p class="text-gray-600 leading-8 mb-5">
+				Our restaurant started with a simple dream — to serve	delicious, fresh and authentic food in a warm and welcoming environment.
+			  </p>
+			  <p class="text-gray-600 leading-8 mb-5">
+				What began as a small kitchen slowly became a place where families, friends and food lovers could come together and enjoy wonderful meals.
+			  </p>
+			  <p class="text-gray-600 leading-8">
+				Our passion has always been simple — serve great food, create beautiful memories and make every guest feel special.
+			  </p>
+			</div>
+		  </div>
+		  <!-- NEXT PAGE -->
+		  <div class="text-center mt-16">
+			<h2 class="text-3xl font-bold mb-4">
+			  👨‍🍳 Meet Our Chef
+			</h2>
+			<p class="text-gray-600 max-w-2xl mx-auto mb-7">
+			  Meet the talented chefs behind the delicious food served at our restaurant.
+			</p>
+        <button onclick="openAboutPage('chefPage')" class="bg-orange-500 text-white px-8 py-3  rounded-full font-semibold hover:bg-orange-600 transition">
+          Meet Our Chef →
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-------------------------------  CHEF DETAIL PAGE   ------------------------- -->
+  <div id="chefPage" class="hidden min-h-screen bg-white">
+    <div class="max-w-7xl mx-auto px-4 py-10">
+      <button onclick="closeAboutPage()" class="mb-8 bg-gray-800 text-white px-5 py-2 rounded-full hover:bg-gray-700 transition">
+        ← Back
+      </button>
+      <div class="text-center mb-12">
+        <p class="text-orange-600 font-semibold uppercase tracking-widest">
+          Meet Our Team
+        </p>
+        <h1 class="text-4xl md:text-6xl font-bold mt-3">
+          👨‍🍳 Chef & Team
+        </h1>
+        <div class="w-20 h-1 bg-orange-500 mx-auto mt-5 rounded-full"></div>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+	  
+   <!-- Chef 1 -->
+        <div class="bg-orange-50 rounded-3xl overflow-hidden  shadow-lg hover:-translate-y-2 transition">
+          <img src="images/chef 1.png" class="w-full h-64 object-cover" alt="Karthik Raj">
+          <div class="p-6 text-center">
+            <h2 class="text-xl font-bold">
+              Karthik Raj
+            </h2>
+            <p class="text-orange-600 font-semibold">
+              Head Chef
+            </p>
+            <p class="text-yellow-500 text-xl mt-3">
+              ★★★★★
+            </p>
+            <p class="text-gray-600 mt-3">
+              Specialist in Indian and Continental cuisine.
+            </p>
+          </div>
+        </div>
+    <!-- Chef 2 -->
+        <div class="bg-orange-50 rounded-3xl overflow-hidden shadow-lg hover:-translate-y-2 transition">
+          <img src="images/chef2.png "class="w-full h-64 object-cover" alt="Ananya Iyer">
+          <div class="p-6 text-center">
+            <h2 class="text-xl font-bold">
+              Deepika 
+            </h2>
+            <p class="text-orange-600 font-semibold">
+              Pastry Chef
+            </p>
+            <p class="text-yellow-500 text-xl mt-3">
+              ★★★★★
+            </p>
+            <p class="text-gray-600 mt-3">
+              Expert in desserts, cakes and bakery creations.
+            </p>
+          </div>
+        </div>
+    <!----------------------------------------- Chef 3 -------------------------------------->
+        <div class="bg-orange-50 rounded-3xl overflow-hidden  shadow-lg hover:-translate-y-2 transition">
+          <img src="images/chef3.jpg" class="w-full h-64 object-cover" alt="Rahul Sharma">
+          <div class="p-6 text-center">
+            <h2 class="text-xl font-bold">
+              Rahul Sharma
+            </h2>
+            <p class="text-orange-600 font-semibold">
+              Sous Chef
+            </p>
+            <p class="text-yellow-500 text-xl mt-3">
+              ★★★★☆
+            </p>
+            <p class="text-gray-600 mt-3">
+              Responsible for consistency and kitchen quality.
+            </p>
+          </div>
+        </div>
+        <!-- Chef 4 -->
+        <div class="bg-orange-50 rounded-3xl overflow-hidden  shadow-lg hover:-translate-y-2 transition">
+          <img src="images/chef4.jpg" class="w-full h-64 object-cover" alt="Arjun Verma">
+          <div class="p-6 text-center">
+            <h2 class="text-xl font-bold">
+              Arjun Verma
+            </h2>
+            <p class="text-orange-600 font-semibold">
+              Grill Chef
+            </p>
+            <p class="text-yellow-500 text-xl mt-3">
+              ★★★★★
+            </p>
+            <p class="text-gray-600 mt-3">
+              Specialist in grilled and BBQ dishes.
+            </p>
+          </div>
+        </div>
+   <!-- Chef 5 -->
+        <div class="bg-orange-50 rounded-3xl overflow-hidden  shadow-lg hover:-translate-y-2 transition">
+          <img src="images/chf 2.png" class="w-full h-64 object-cover" alt="Priya Nair">
+          <div class="p-6 text-center">
+            <h2 class="text-xl font-bold">
+              Priya Nair
+            </h2>
+            <p class="text-orange-600 font-semibold">
+              South Indian Specialist
+            </p>
+            <p class="text-yellow-500 text-xl mt-3">
+              ★★★★★
+            </p>
+            <p class="text-gray-600 mt-3">
+              Specialist in authentic South Indian cuisine.
+            </p>
+          </div>
+        </div>
+  <!------------------------------------ Chef 6 ------------------------------------------------>
+        <div class="bg-orange-50 rounded-3xl overflow-hidden shadow-lg hover:-translate-y-2 transition">
+          <img src="images/chef6.jpg" class="w-full h-64 object-cover" alt="Vikram Singh">
+          <div class="p-6 text-center">
+            <h2 class="text-xl font-bold">
+              Vikram Singh
+            </h2>
+            <p class="text-orange-600 font-semibold">
+              Beverage Expert
+            </p>
+            <p class="text-yellow-500 text-xl mt-3">
+              ★★★★☆
+            </p>
+            <p class="text-gray-600 mt-3">
+              Creates refreshing mocktails and specialty beverages.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- NEXT PAGE -->
+      <div class="text-center mt-16">
+        <h2 class="text-3xl font-bold mb-4">
+          💬 Guest Experience
+        </h2>
+        <p class="text-gray-600 max-w-2xl mx-auto mb-7">
+          See what our guests say about their dining experience.
+        </p>
+        <button onclick="openAboutPage('reviewPage')" class="bg-orange-500 text-white px-8 py-3 rounded-full font-semibold hover:bg-orange-600 transition">
+          View Guest Experience →
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- =============================================== CUSTOMER REVIEW DETAIL PAGE================================================= -->
+  <div id="reviewPage" class="hidden min-h-screen bg-gray-100">
+    <div class="max-w-6xl mx-auto px-4 py-10">
+      <button onclick="closeAboutPage()" class="mb-8 bg-gray-800 text-white px-5 py-2 rounded-full hover:bg-gray-700 transition">
+        ← Back
+      </button>
+      <div class="text-center mb-12">
+        <p class="text-orange-600 font-semibold uppercase tracking-widest">
+          Guest Experiences
+        </p>
+        <h1 class="text-4xl md:text-6xl font-bold mt-3">
+          💬 Customer Reviews
+        </h1>
+        <div class="w-20 h-1 bg-orange-500 mx-auto mt-5 rounded-full"></div>
+      </div>
+      <div class="grid md:grid-cols-3 gap-7">
+        <div class="bg-white p-7 rounded-3xl shadow-lg">
+          <div class="text-yellow-500 text-xl">
+            ★★★★★
+          </div>
+          <p class="text-gray-600 leading-7 mt-4">
+            "The food was amazing and the service was excellent. We had a wonderful family dining experience."
+          </p>
+          <h3 class="font-bold mt-5">
+            Priya S.
+          </h3>
+          <p class="text-orange-600 text-sm">
+            Chennai
+          </p>
+        </div>
+        <div class="bg-white p-7 rounded-3xl shadow-lg">
+          <div class="text-yellow-500 text-xl">
+            ★★★★★
+          </div>
+          <p class="text-gray-600 leading-7 mt-4">
+            "The biryani was delicious and the ambience was beautiful. The staff were very friendly."
+          </p>
+          <h3 class="font-bold mt-5">
+            Rahul K.
+          </h3>
+          <p class="text-orange-600 text-sm">
+            Bangalore
+          </p>
+        </div>
+        <div class="bg-white p-7 rounded-3xl shadow-lg">
+          <div class="text-yellow-500 text-xl">
+            ★★★★★
+          </div>
+          <p class="text-gray-600 leading-7 mt-4">
+            "A lovely restaurant with fresh food and great
+            service. I especially enjoyed the desserts."
+          </p>
+          <h3 class="font-bold mt-5">
+            Sneha R.
+          </h3>
+          <p class="text-orange-600 text-sm">
+            Vellore
+          </p>
+        </div>
+        <div class="bg-white p-7 rounded-3xl shadow-lg">
+          <div class="text-yellow-500 text-xl">
+            ★★★★☆
+          </div>
+          <p class="text-gray-600 leading-7 mt-4">
+            "Everything was perfectly prepared and served hot. Definitely a place I would recommend."
+          </p>
+          <h3 class="font-bold mt-5">
+            Arjun M.
+          </h3>
+		<p class="text-orange-600 text-sm">
+            Coimbatore
+          </p>
+        </div>
+        <div class="bg-white p-7 rounded-3xl shadow-lg">
+          <div class="text-yellow-500 text-xl">
+            ★★★★★
+          </div>
+          <p class="text-gray-600 leading-7 mt-4">
+            "The ambience was beautiful and the food tasted fresh. Perfect place for family dinner."
+          </p>
+          <h3 class="font-bold mt-5">
+            Meena P.
+          </h3>
+          <p class="text-orange-600 text-sm">
+            Chennai
+          </p>
+        </div>
+        <div class="bg-white p-7 rounded-3xl shadow-lg">
+          <div class="text-yellow-500 text-xl">
+            ★★★★★
+          </div>
+          <p class="text-gray-600 leading-7 mt-4">
+            "Amazing taste, friendly staff and a beautiful
+            dining atmosphere. Will visit again!"
+          </p>
+          <h3 class="font-bold mt-5">
+            David R.
+          </h3>
+          <p class="text-orange-600 text-sm">
+            Bangalore
+          </p>
+        </div>
+      </div>
+<!-- NEXT PAGE -->
+		  <div class="text-center mt-16">
+				<h2 class="text-3xl font-bold mb-4">
+				  🧼 Our Promise
+				</h2>
+				<p class="text-gray-600 max-w-2xl mx-auto mb-7">
+				  Discover how we maintain hygiene, freshness and
+				  quality in every dish.
+				</p>
+				<button onclick="openAboutPage('promisePage')" class="bg-orange-500 text-white px-8 py-3 rounded-full font-semibold hover:bg-orange-600 transition">
+				  View Our Promise →
+				</button>
+			</div>
+		</div>
+	</div>
+  <!-- =================================================HYGIENE & QUALITY DETAIL PAGE===================================================== -->
+	  <div id="promisePage" class="hidden min-h-screen bg-orange-50">
+		<div class="max-w-7xl mx-auto px-4 py-10">
+		  <button onclick="closeAboutPage()" class="mb-8 bg-gray-800 text-white px-5 py-2 rounded-full hover:bg-gray-700 transition">
+			← Back
+		  </button>
+		  <div class="text-center mb-12">
+			<p class="text-orange-600 font-semibold uppercase tracking-widest">
+			  Our Promise
+			</p>
+			<h1 class="text-4xl md:text-6xl font-bold mt-3">
+			  🧼 Hygiene & Quality
+			</h1>
+			<div class="w-20 h-1 bg-orange-500 mx-auto mt-5 rounded-full"></div>
+			<p class="text-gray-600 max-w-2xl mx-auto mt-5">
+			  Great food begins with fresh ingredients, clean kitchens and responsible food preparation.
+			</p>
+		  </div>
+		  <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-7">
+			<div class="bg-white p-8 rounded-3xl shadow-lg text-center hover:-translate-y-2 transition">
+			  <div class="text-5xl mb-5">
+				🧼
+			  </div>
+			  <h2 class="text-xl font-bold mb-3">
+				Clean Kitchen
+			  </h2>
+			  <p class="text-gray-600 leading-6">
+				Our kitchen and preparation areas are regularly cleaned and carefully maintained.
+			  </p>
+			</div>
+			<div class="bg-white p-8 rounded-3xl shadow-lg text-center hover:-translate-y-2 transition">
+			  <div class="text-5xl mb-5">
+				🌿
+			  </div>
+			  <h2 class="text-xl font-bold mb-3">
+				Fresh Ingredients
+			  </h2>
+			  <p class="text-gray-600 leading-6">
+				We carefully select fresh and quality ingredients for our daily food preparation.
+			  </p>
+			</div>
+			<div class="bg-white p-8 rounded-3xl shadow-lg text-center hover:-translate-y-2 transition">
+			  <div class="text-5xl mb-5">
+				👨‍🍳
+			  </div>
+			  <h2 class="text-xl font-bold mb-3">
+				Staff Hygiene
+			  </h2>
+			  <p class="text-gray-600 leading-6">
+				Our kitchen team follows proper personal hygiene and responsible food handling practices.
+			  </p>
+			</div>
+			<div class="bg-white p-8 rounded-3xl shadow-lg text-center hover:-translate-y-2 transition">
+			  <div class="text-5xl mb-5">
+				✅
+			  </div>
+			  <h2 class="text-xl font-bold mb-3">
+				Quality Food
+			  </h2>
+			  <p class="text-gray-600 leading-6">
+				We focus on consistent taste, freshness and quality in every dish we serve.
+			  </p>
+			</div>
+		  </div>
+		  <div class="bg-white rounded-3xl shadow-xl p-8 md:p-12 mt-12">
+			<h2 class="text-3xl font-bold mb-6 text-center">
+			  Quality You Can Trust
+			</h2>
+			<p class="text-gray-600 leading-8 text-center max-w-3xl mx-auto">
+			  From selecting ingredients to preparing and serving food, we take care at every stage. Our team works together to  maintain cleanliness, freshness and consistency throughout the restaurant.
+			</p>
+		  </div>
+		  <div class="text-center mt-12">
+			<button onclick="closeAboutPage()" class="bg-orange-500 text-white px-8 py-3 rounded-full font-semibold hover:bg-orange-600 transition">
+			  ← Back to About
+			</button>
+		  </div>
+		</div>
+	  </div>
+	</div>
+<!--  Testimonials -->
+		<section class="bg-gray-300 py-16 text-center">
+		  <h2 class="text-3xl font-bold mb-10">What Customers Say</h2>
+		  <p class="max-w-xl mx-auto">
+			⭐⭐⭐⭐⭐ "Best food in town! Loved the biryani and service."
+		  </p>
+		</section>
+<!-- 📍 Contact -->
+		<section class="py-16 text-center">
+		  <h2 class="text-3xl font-bold mb-6">Contact Us</h2>
+		  <p>📍 Chennai, India</p>
+		  <p>📞 +91 12345 67890</p>
+		</section>
+<!--footer-->			
+	<footer class="bg-white text-white p-10 w-full mx-auto">
+			<div class="max-w-7xl mx-auto px-4 grid md:grid-cols-4 gap-8">
+<!-- Logo + About -->
+			<div>
+			  <h2 class="text-lg font-semibold text-red-400">FOOD FIESTA</h2>
+			  <p class="mt-3 text-black">
+				Serving delicious food with authentic taste and quality ingredients.
+			  </p>
+			</div>
+<!-- Quick Links -->
+			<div>
+			  <h3 class="text-lg font-semibold  text-red-400 mb-3">QUICK LINK</h3>
+			  <ul class="space-y-2 text-black">
+				<li><a href="home .html" class="hover:text-orange-400">Home</a></li>
+				<li><a href="Menu.html" class="hover:text-orange-400">Menu</a></li>
+				<li><a href="Catagery.html" class="hover:text-orange-400">Category</a></li>
+				<li><a href="About us.html" class="hover:text-orange-400">About</a></li>
+				<li><a href="contact .html"class="hover:text-orange-400">Contact</a></li>
+			  </ul>
+			</div>
+<!-- Contact Info -->
+				<div>
+				  <h3 class="text-lg  text-red-400 font-semibold mb-3">CONTACT</h3>
+				  <p class="text-black">📍 Chennai, India</p>
+				  <p class="text-black">📞 +91 12345 67890</p>
+				  <p class="text-black">📧 contact@foodfesta.com</p>
+				</div>
+<!-- Social Media -->
+				<div>
+				  <h3 class="text-lg text-red-400 font-semibold mb-3">FOLLOW US</h3>
+				  <div class="flex gap-4 text-xl">
+					<span class="hover:text-orange-400 cursor-pointer">📘</span>
+					<span class="hover:text-orange-400 cursor-pointer">📸</span>
+					<span class="hover:text-orange-400 cursor-pointer">🐦</span>
+				  </div>
+				</div>
+			</div>
+<!-- Bottom -->
+			  <div class="md:text-center mt-8  pt-4 text-black">
+				© 2026 Food Festa Restaurant. All rights reserved.
+			  </div>
+			</footer>
+<!-- Booking Popup -->
+	<div id="bookingModal" class="fixed inset-0 bg-black/60 hidden items-center justify-center z-50">
+	  <div class="bg-white p-6 rounded-xl w-[90%] max-w-md">
+			<h2 class="text-xl font-bold mb-4 text-center">Book a Table</h2>
+			<input id="bname" type="text" placeholder="Your Name" class="w-full p-3 mb-3 border rounded">
+			<input id="bphone" type="tel" placeholder="Phone Number" class="w-full p-3 mb-3 border rounded">
+			<input id="bdate" type="date" class="w-full p-3 mb-3 border rounded">
+			<input id="btime" type="time" class="w-full p-3 mb-3 border rounded">
+				<button onclick="submitBooking()"  class="bg-orange-300 w-full py-2 rounded mb-2">
+				  Confirm Booking
+				</button>
+			<button onclick="closeBooking()" class="w-full py-2 border rounded">
+			  Cancel
+			</button>
+		</div>
+	</div>
+</section>
+<script>
+// Dark mode
+		function toggleDark(){ 
+		 document.body.classList.toggle("bg-gray-900"); 
+		 document.body.classList.toggle("text-white"); 
+		}
+	function openBooking(){
+	  document.getElementById("bookingModal").classList.remove("hidden");
+	  document.getElementById("bookingModal").classList.add("flex");
+	}
+	function closeBooking(){
+	  document.getElementById("bookingModal").classList.add("hidden");
+	}
+	function submitBooking(){
+	  let name = document.getElementById("bname").value.trim();
+	  let phone = document.getElementById("bphone").value.trim();
+	  let date = document.getElementById("bdate").value;
+	  let time = document.getElementById("btime").value;
+	  if(name=="" || phone=="" || date=="" || time==""){
+		alert("Please fill all fields");
+		return;
+	  }
+	  alert("Table booked successfully!");
+	  closeBooking();
+	  document.getElementById("bname").value="";
+	  document.getElementById("bphone").value="";
+	  document.getElementById("bdate").value="";
+	  document.getElementById("btime").value="";
+	}
+	function openAboutPage(pageId) {
+    const container = document.getElementById("aboutDetailPages");
+    const pages = document.querySelectorAll(
+        "#aboutDetailPages > div"
+    );
+    pages.forEach(function(page) {
+        page.classList.add("hidden");
+    });
+    const selectedPage = document.getElementById(pageId);
+    if (selectedPage) {
+        selectedPage.classList.remove("hidden");
+    }
+    container.classList.remove("hidden");
+    document.body.classList.add("overflow-hidden");
+    window.scrollTo(0, 0);
+	}
+	function closeAboutPage() {
+		const container = document.getElementById("aboutDetailPages");
+		container.classList.add("hidden");
+		document.body.classList.remove("overflow-hidden");
+		window.scrollTo(0, 0);
+	}
+	</script>
+</body>
+</html>
